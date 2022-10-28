@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+//----fonts------
+$inter: "Inter", sans-serif;
+$roboto: "Roboto", sans-serif;
+$poppins: "Poppins", sans-serif;
+$crete: "Crete Round", serif;
+
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+);
+
+// ------colors------
+
+$primary: #ff6b00;
+$secondary: #1c1a19;
+$base-white: #fff;
+$white2: #f4f5f7;
+$base-navy: #172b4d;
+$gray1: #505f79;
+$fade-gray: #505f79;
+$gray2: #979493;
+$gray3: #dbd8d7;
+$fade-black: #3c3a39;
+$milky-white: #fff5e1;
+$black1: #212121;
+$black2: #3e3c3c;
+$navy2: #091e42;
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin textBasestyles() {
+  font-style: normal;
+  font-weight: weight(regular);
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+
+.navigation {
+  display: flex;
+  background: $black2;
+  height: 4.5em;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.logo {
+  display: flex;
+  margin-left: 2.5rem;
+  h2 {
+    a {
+      font-family: $inter;
+    font-style: normal;
+    font-weight: weight(bold);
+    font-size: 18px;
+line-height: 24px;
+
+    color: $base-white;
+    }
+  }
+}
+
+.navlinks {
+  display: none;
+  ul {
+    display: flex;
+  }
+  .navItem {
+    margin: 1em;
+    a {
+      color: $base-white;
+    }
+  }
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 2.8em;
+  width: 2.8em;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.menu {
+  display: flex;
+  position: relative;
+  width: 1.9em;
+  height: 0.25em;
+  border-radius: 0.31em;
+  background: $base-white;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu::before,
+.menu::after {
+  content: "";
+  position: absolute;
+  width: 1.9em;
+  height: 0.25em;
+  border-radius: 0.31em;
+  background: $base-white;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu::before {
+  transform: translateY(-0.625em);
+}
+
+.menu::after {
+  transform: translateY(0.625em);
+}
+
+.toggle.open .menu {
+  transform: translateX(-1.9em);
+  background: transparent;
+}
+
+.toggle.open .menu::before {
+  transform: rotate(45deg) translate(1.25em, -1.25em);
+}
+
+.toggle.open .menu::after {
+  transform: rotate(-45deg) translate(1.25em, 1.25em);
+}
+
+.navlinks.open {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $black2;
+  height: 100%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 10%;
+  }
+  .icn {
+    display: none;
+  }
+
+  .navItem {
+    border-bottom: 1px solid $base-white;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: weight(bold);
+    font-size: 1.4em;
+    line-height: 2em;
+  }
+}
+
+.intro {
+  background-color: $black1;
+  background-image: url("/images/hd2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 60%;
+  max-width: 100%;
+  height: 870px;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-text {
+  margin-left: 1.5rem;
+  max-width: 35.4em;
+  max-height: 46.2em;
+  margin-top: 15%;
+  h1 {
+    font-family: $crete;
+    font-style: normal;
+    font-weight: weight(regular);
+    font-size: 56px;
+    line-height: 64px;
+    color: $primary;
+  }
+  h2 {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $milky-white;
+  }
+  p {
+    font-family: $poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white2;
+  }
+}
+
+.socials {
+  margin-left: 1rem;
+  ul {
+    display: flex;
+    li {
+      margin: 10px;
+      a {
+        color: $gray3;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    h2 {
+      margin-left: 6rem;
+    }
+  }
+
+  .navlinks {
+    display: block;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .intro {
+    display: grid;
+
+    background-image: url("/images/hd.png");
+    background-size: 500px;
+    background-position: 100% 60%;
+    grid-template-columns: 10% 80%;
+    .socials {
+      grid-column: 1/2;
+      ul {
+        display: flex;
+        position: relative;
+        top: 25%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        a {
+          font-size: 1.5em;
+        }
+      }
+    }
+    .intro-text {
+      top: 20%;
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+  }
+}
