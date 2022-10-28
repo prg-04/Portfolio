@@ -58,14 +58,17 @@ $navy2: #091e42;
 
 .logo {
   display: flex;
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
   h2 {
-    font-family: $inter;
+    a {
+      font-family: $inter;
     font-style: normal;
     font-weight: weight(bold);
-    font-size: 1.25em;
-    line-height: 1.25em;
+    font-size: 18px;
+line-height: 24px;
+
     color: $base-white;
+    }
   }
 }
 

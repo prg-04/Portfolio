@@ -16,14 +16,14 @@
 
 .logo {
   display: flex;
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
 }
-.logo h2 {
+.logo h2 a {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 1.25em;
-  line-height: 1.25em;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
 }
 
