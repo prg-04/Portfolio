@@ -337,7 +337,6 @@ line-height: 24px;
     li {
       margin-right: 5px;
       padding: 10px;
-      // border: 1px solid $base-white;
       border-radius: 3px;
       background-color: dimgray;
       a {
@@ -348,7 +347,7 @@ line-height: 24px;
   button {
     margin-top: 2.35rem;
     height: 48px;
-    width: 97%;
+    width: 370px;
     background-color: $primary;
     color: $base-white;
     transition: all .3s ease-in-out;
