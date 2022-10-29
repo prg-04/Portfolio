@@ -96,7 +96,6 @@ line-height: 24px;
   cursor: pointer;
 }
 .menu {
-  display: flex;
   position: relative;
   width: 1.9em;
   height: 0.25em;
@@ -322,7 +321,7 @@ line-height: 24px;
     font-size: 2em;
     line-height: 44px;
     color: $base-white;
-    margin-top: 10rem;
+    margin-top: 8rem;
   }
   p {
     font-family: $inter;
@@ -347,11 +346,18 @@ line-height: 24px;
     }
   }
   button {
-    margin-top: 2rem;
+    margin-top: 2.35rem;
     height: 48px;
-    width: 100%;
+    width: 97%;
     background-color: $primary;
     color: $base-white;
+    transition: all .3s ease-in-out;
+    border: none;
+    &:hover {
+      transform: translateY(5px);
+      background-color: $milky-white;
+      color: $primary;
+    }
   }
 }
 

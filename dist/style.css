@@ -52,7 +52,6 @@
 }
 
 .menu {
-  display: flex;
   position: relative;
   width: 1.9em;
   height: 0.25em;
@@ -280,7 +279,7 @@
   font-size: 2em;
   line-height: 44px;
   color: #fff;
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 .card p {
   font-family: "Inter", sans-serif;
@@ -304,11 +303,18 @@
   color: #fff;
 }
 .card button {
-  margin-top: 2rem;
+  margin-top: 2.35rem;
   height: 48px;
-  width: 100%;
+  width: 97%;
   background-color: #ff6b00;
   color: #fff;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+.card button:hover {
+  transform: translateY(5px);
+  background-color: #fff5e1;
+  color: #ff6b00;
 }
 
 .cd1,
