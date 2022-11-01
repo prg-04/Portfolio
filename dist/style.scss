@@ -476,8 +476,6 @@ line-height: 24px;
 
   .contact-text {
     display: flex;
-    // align-items: center;
-    // border: 3px solid red;
     width: 327px;
     height: 216px;
     margin: 5rem 1rem 3rem 0;
@@ -505,11 +503,17 @@ line-height: 24px;
         height: 35px;
       }
 
+      
       input,
       textarea {
         margin-left: 1rem;
+        padding: 15px;
         width: 100%;
         border: none;
+        
+        
+      }
+      input {
         border-bottom: 1px solid $gray3;
       }
 
@@ -519,53 +523,11 @@ line-height: 24px;
       }
 
       textarea {
-        background-color: #e7e5e5;
+        background-color: #fbf8f7;
       }
-
-      .submitErr {
-        color: red;
-      }
-      .fa-sharp {
-        color: green;
-      }
-
-      .firstNerror {
-        position: absolute;
-        right: 360px;
-        top: 10px;
-      }
-
-      .lastNerror {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-      }
-
-      .fullNerror {
-        position: absolute;
-        right: 20px;
-        top: 10px;
-      }
-
-      .emailError {
-        position: absolute;
-        right: 20px;
-        top: 45px;
-      }
-
-      .msgError {
-        position: absolute;
-        right: 20px;
-        top: 200px;
-      }
-
       .fullN,
       #fullName {
         display: block;
-      }
-
-      .err {
-        color: red;
       }
     }
     .allNames {
@@ -583,7 +545,11 @@ line-height: 24px;
       font-weight: weight(bold);
       font-size: 17px;
       line-height: 24px;
-      margin-left: 1rem;
+      margin-left: 9rem;
+    }
+
+    #email {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -705,43 +671,6 @@ line-height: 24px;
   
         .allNames {
           display: flex;
-        }
-  
-        .submitErr {
-          color: red;
-        }
-        .fa-sharp {
-          color: green;
-        }
-  
-        .firstNerror {
-          position: absolute;
-          right: 360px;
-          top: 10px;
-        }
-  
-        .lastNerror {
-          position: absolute;
-          right: 15px;
-          top: 10px;
-        }
-  
-        .fullNerror {
-          position: absolute;
-          right: 20px;
-          top: 10px;
-        }
-  
-        .emailError {
-          position: absolute;
-          right: 20px;
-          top: 45px;
-        }
-  
-        .msgError {
-          position: absolute;
-          right: 20px;
-          top: 200px;
         }
       }
     }
@@ -896,41 +825,17 @@ line-height: 24px;
         display: flex;
       }
 
-      .submitErr {
-        color: red;
-      }
-      .fa-sharp {
-        color: green;
+      #firstName {
+        width: 90%;
       }
 
-      .firstNerror {
-        position: absolute;
-        right: 360px;
-        top: 10px;
+      #lastName {
+        margin-left: 3rem;
+        width:90%;
       }
 
-      .lastNerror {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-      }
-
-      .fullNerror {
-        position: absolute;
-        right: 20px;
-        top: 10px;
-      }
-
-      .emailError {
-        position: absolute;
-        right: 20px;
-        top: 45px;
-      }
-
-      .msgError {
-        position: absolute;
-        right: 20px;
-        top: 200px;
+      button {
+        margin-left: 1rem;
       }
     }
   }

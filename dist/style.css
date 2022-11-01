@@ -466,8 +466,11 @@
 .form fieldset .input-group input,
 .form fieldset .input-group textarea {
   margin-left: 1rem;
+  padding: 15px;
   width: 100%;
   border: none;
+}
+.form fieldset .input-group input {
   border-bottom: 1px solid #dbd8d7;
 }
 .form fieldset .input-group input:focus,
@@ -475,45 +478,11 @@
   outline: none;
 }
 .form fieldset .input-group textarea {
-  background-color: #e7e5e5;
-}
-.form fieldset .input-group .submitErr {
-  color: red;
-}
-.form fieldset .input-group .fa-sharp {
-  color: green;
-}
-.form fieldset .input-group .firstNerror {
-  position: absolute;
-  right: 360px;
-  top: 10px;
-}
-.form fieldset .input-group .lastNerror {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-}
-.form fieldset .input-group .fullNerror {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-.form fieldset .input-group .emailError {
-  position: absolute;
-  right: 20px;
-  top: 45px;
-}
-.form fieldset .input-group .msgError {
-  position: absolute;
-  right: 20px;
-  top: 200px;
+  background-color: #fbf8f7;
 }
 .form fieldset .input-group .fullN,
 .form fieldset .input-group #fullName {
   display: block;
-}
-.form fieldset .input-group .err {
-  color: red;
 }
 .form fieldset .allNames {
   display: none;
@@ -530,7 +499,10 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  margin-left: 1rem;
+  margin-left: 9rem;
+}
+.form fieldset #email {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 450px) and (max-width: 767px) {
@@ -638,37 +610,6 @@
   }
   .contact-text .form fieldset .allNames {
     display: flex;
-  }
-  .contact-text .form fieldset .submitErr {
-    color: red;
-  }
-  .contact-text .form fieldset .fa-sharp {
-    color: green;
-  }
-  .contact-text .form fieldset .firstNerror {
-    position: absolute;
-    right: 360px;
-    top: 10px;
-  }
-  .contact-text .form fieldset .lastNerror {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  }
-  .contact-text .form fieldset .fullNerror {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
-  .contact-text .form fieldset .emailError {
-    position: absolute;
-    right: 20px;
-    top: 45px;
-  }
-  .contact-text .form fieldset .msgError {
-    position: absolute;
-    right: 20px;
-    top: 200px;
   }
 }
 @media (min-width: 48em) {
@@ -806,35 +747,14 @@
   .form fieldset .allNames {
     display: flex;
   }
-  .form fieldset .submitErr {
-    color: red;
+  .form fieldset #firstName {
+    width: 90%;
   }
-  .form fieldset .fa-sharp {
-    color: green;
+  .form fieldset #lastName {
+    margin-left: 3rem;
+    width: 90%;
   }
-  .form fieldset .firstNerror {
-    position: absolute;
-    right: 360px;
-    top: 10px;
-  }
-  .form fieldset .lastNerror {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  }
-  .form fieldset .fullNerror {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
-  .form fieldset .emailError {
-    position: absolute;
-    right: 20px;
-    top: 45px;
-  }
-  .form fieldset .msgError {
-    position: absolute;
-    right: 20px;
-    top: 200px;
+  .form fieldset button {
+    margin-left: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
