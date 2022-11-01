@@ -253,7 +253,6 @@ line-height: 24px;
 .plchdr {
   display: flex;
   max-width: 100%;
-
   flex-direction: column;
   .img {
     img {
@@ -334,6 +333,7 @@ line-height: 24px;
   ul {
     display: flex;
     margin-top: 1.5rem;
+
     li {
       margin-right: 5px;
       padding: 10px;
@@ -468,6 +468,126 @@ line-height: 24px;
   }
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact-text {
+    display: flex;
+    // align-items: center;
+    // border: 3px solid red;
+    width: 327px;
+    height: 216px;
+    margin: 5rem 1rem 3rem 0;
+    p {
+      font-family: $inter;
+      font-style: normal;
+      font-weight: weight(bold);
+      font-size: 32px;
+      line-height: 44px;
+      color: $base-navy;
+    }
+  }
+}
+
+.form {
+  margin-top: 10rem;
+  fieldset {
+    width: 384px;
+    height: 350px;
+    position: relative;
+    border: none;
+    .input-group {
+      width: 100%;
+      input {
+        height: 35px;
+      }
+
+      input,
+      textarea {
+        margin-left: 1rem;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $gray3;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+
+      textarea {
+        background-color: #e7e5e5;
+      }
+
+      .submitErr {
+        color: red;
+      }
+      .fa-sharp {
+        color: green;
+      }
+
+      .firstNerror {
+        position: absolute;
+        right: 360px;
+        top: 10px;
+      }
+
+      .lastNerror {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+      }
+
+      .fullNerror {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+
+      .emailError {
+        position: absolute;
+        right: 20px;
+        top: 45px;
+      }
+
+      .msgError {
+        position: absolute;
+        right: 20px;
+        top: 200px;
+      }
+
+      .fullN,
+      #fullName {
+        display: block;
+      }
+
+      .err {
+        color: red;
+      }
+    }
+    .allNames {
+      display: none;
+    }
+    button {
+      margin-top: 1.5rem;
+      width: 122px;
+      height: 48px;
+      background-color: $primary;
+      color: $base-white;
+      border: none;
+      font-family: $roboto;
+      font-style: normal;
+      font-weight: weight(bold);
+      font-size: 17px;
+      line-height: 24px;
+      margin-left: 1rem;
+    }
+  }
+}
+
 @media (min-width: 450px) and (max-width: 767px) {
   .intro {
     background-image: url("/images/hd.png");
@@ -554,10 +674,80 @@ line-height: 24px;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
+  #contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .contact-text {
+    display: flex;
+    p {
+      color: $secondary;
+      font-family: $inter;
+      font-style: normal;
+      font-weight: weight(bold);
+      font-size: 40px;
+      line-height: 52px;
+    }
+  
+    .form {
+      fieldset {
+        width: 684px;
+        height: 330px;
+        .fullN,
+        #fullName {
+          display: none;
+        }
+  
+        .allNames {
+          display: flex;
+        }
+  
+        .submitErr {
+          color: red;
+        }
+        .fa-sharp {
+          color: green;
+        }
+  
+        .firstNerror {
+          position: absolute;
+          right: 360px;
+          top: 10px;
+        }
+  
+        .lastNerror {
+          position: absolute;
+          right: 15px;
+          top: 10px;
+        }
+  
+        .fullNerror {
+          position: absolute;
+          right: 20px;
+          top: 10px;
+        }
+  
+        .emailError {
+          position: absolute;
+          right: 20px;
+          top: 45px;
+        }
+  
+        .msgError {
+          position: absolute;
+          right: 20px;
+          top: 200px;
+        }
+      }
+    }
 }
-
-
-@media (min-width: 768px) {
+}
+@media (min-width: 48em) {
   .logo {
     h2 {
       margin-left: 6rem;
@@ -574,17 +764,18 @@ line-height: 24px;
 
   .intro {
     display: grid;
-
     background-image: url("/images/hd.png");
     background-size: 500px;
     background-position: 100% 60%;
     grid-template-columns: 10% 80%;
     .socials {
       grid-column: 1/2;
+      position: relative;
+        top: 10%;
       ul {
         display: flex;
         position: relative;
-        top: 25%;
+        top: 10%;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -599,6 +790,7 @@ line-height: 24px;
       grid-row: 1/2;
     }
   }
+
   #portfolio {
     display: grid;
     max-width: 100%;
@@ -682,4 +874,64 @@ line-height: 24px;
     justify-content: space-around;
   }
 
+  #contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-text {
+    margin-left: 3rem;
+  }
+  .form {
+    fieldset {
+      width: 684px;
+      height: 330px;
+      .fullN,
+      #fullName {
+        display: none;
+      }
+
+      .allNames {
+        display: flex;
+      }
+
+      .submitErr {
+        color: red;
+      }
+      .fa-sharp {
+        color: green;
+      }
+
+      .firstNerror {
+        position: absolute;
+        right: 360px;
+        top: 10px;
+      }
+
+      .lastNerror {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+      }
+
+      .fullNerror {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+
+      .emailError {
+        position: absolute;
+        right: 20px;
+        top: 45px;
+      }
+
+      .msgError {
+        position: absolute;
+        right: 20px;
+        top: 200px;
+      }
+    }
+  }
 }
