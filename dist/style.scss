@@ -46,7 +46,6 @@ $navy2: #091e42;
   line-height: 1.6em;
 }
 
-
 .navigation {
   display: flex;
   background: $black2;
@@ -60,15 +59,30 @@ $navy2: #091e42;
   display: flex;
   margin-left: 2.5rem;
   h2 {
-    a {
-      font-family: $inter;
+    animation-name: logo;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes logo {
+    0% {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  a {
+    font-family: $inter;
     font-style: normal;
     font-weight: weight(bold);
     font-size: 18px;
-line-height: 24px;
-
+    line-height: 24px;
     color: $base-white;
-    }
   }
 }
 
@@ -253,7 +267,6 @@ line-height: 24px;
 .plchdr {
   display: flex;
   max-width: 100%;
-
   flex-direction: column;
   .img {
     img {
@@ -334,6 +347,7 @@ line-height: 24px;
   ul {
     display: flex;
     margin-top: 1.5rem;
+
     li {
       margin-right: 5px;
       padding: 10px;
@@ -350,7 +364,7 @@ line-height: 24px;
     width: 370px;
     background-color: $primary;
     color: $base-white;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border: none;
     &:hover {
       transform: translateY(5px);
@@ -468,6 +482,94 @@ line-height: 24px;
   }
 }
 
+#contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 327px;
+  height: 216px;
+  margin: 6rem 1rem 3rem 2rem;
+  p {
+    font-family: $inter;
+    font-style: normal;
+    font-weight: weight(bold);
+    font-size: 32px;
+    line-height: 44px;
+    color: $base-navy;
+  }
+}
+
+.form {
+  display: none;
+}
+
+.form2 {
+  fieldset {
+    width: 328px;
+    height: 400px;
+    border: none;
+    input {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      margin-left: 1rem;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $gray3;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+
+    textarea {
+      background-color: #e7e5e5;
+    }
+
+    button {
+      width: 122px;
+      height: 48px;
+      background-color: $primary;
+      color: $base-white;
+      border: none;
+      font-family: $roboto;
+      font-style: normal;
+      font-weight: weight(bold);
+      font-size: 17px;
+      line-height: 24px;
+      margin-left: 8em;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.copyright {
+  border-top: 1px solid#DFE1E6;
+  margin-top: 8rem;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 15px;
+      a {
+        font-size: 1.5em;
+        color: $fade-gray;
+      }
+    }
+  }
+}
+
 @media (min-width: 450px) and (max-width: 767px) {
   .intro {
     background-image: url("/images/hd.png");
@@ -554,10 +656,80 @@ line-height: 24px;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
+  #contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .form {
+    display: none;
+  }
+
+  .form2 {
+    margin-top: 8rem;
+    margin-right: 2rem;
+    fieldset {
+      width: 328px;
+      height: 400px;
+      border: none;
+      input {
+        margin-bottom: 1rem;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $gray3;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+
+      textarea {
+        background-color: #e7e5e5;
+      }
+
+      button {
+        width: 122px;
+        height: 48px;
+        background-color: $primary;
+        color: $base-white;
+        border: none;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: weight(bold);
+        font-size: 17px;
+        line-height: 24px;
+        margin-left: 8em;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid#DFE1E6;
+    margin-top: 8rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 15px;
+        a {
+          font-size: 1.5em;
+          color: $fade-gray;
+        }
+      }
+    }
+  }
 }
-
-
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   .logo {
     h2 {
       margin-left: 6rem;
@@ -574,17 +746,18 @@ line-height: 24px;
 
   .intro {
     display: grid;
-
     background-image: url("/images/hd.png");
     background-size: 500px;
     background-position: 100% 60%;
     grid-template-columns: 10% 80%;
     .socials {
       grid-column: 1/2;
+      position: relative;
+      top: 10%;
       ul {
         display: flex;
         position: relative;
-        top: 25%;
+        top: 10%;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -599,6 +772,7 @@ line-height: 24px;
       grid-row: 1/2;
     }
   }
+
   #portfolio {
     display: grid;
     max-width: 100%;
@@ -607,7 +781,6 @@ line-height: 24px;
     gap: 10px;
     .title {
       width: 100%;
-
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -682,4 +855,98 @@ line-height: 24px;
     justify-content: space-around;
   }
 
+  #contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-text {
+    margin-top: 8rem;
+    margin-left: 3rem;
+    width: 455px;
+    height: 256px;
+  }
+  .form {
+    margin-top: 4rem;
+    display: block;
+    fieldset {
+      width: 684px;
+      height: 330px;
+      border: none;
+      input {
+        margin-bottom: 1rem;
+      }
+
+      input,
+      textarea {
+        width: 85%;
+        padding: 1em;
+        border: none;
+      }
+
+      input {
+        border-bottom: 1px solid $gray3;
+      }
+
+      textarea {
+        background-color: #fbf8f7;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+
+      .names {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .firstN {
+        position: relative;
+        width: 40%;
+      }
+
+      .lastN {
+        position: relative;
+        left: -10%;
+        width: 40%;
+      }
+
+      button {
+        width: 122px;
+        height: 48px;
+        background-color: $primary;
+        color: $base-white;
+        border: none;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: weight(bold);
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .form2 {
+    display: none;
+  }
+
+  .copyright {
+    border-top: 1px solid #dfe1e6;
+    margin-top: 8rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 15px;
+        a {
+          font-size: 2em;
+          color: $fade-gray;
+        }
+      }
+    }
+  }
 }

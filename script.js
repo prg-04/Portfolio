@@ -13,3 +13,13 @@ toggleMenu.addEventListener("click", (e) => {
 
   navlinks.classList.toggle('open');
 });
+
+
+
+function closeMenu() {
+  toggleMenu.classList.remove('open');
+  navLinks.classList.remove('open');
+  menuOpen = false;
+}
+
+ 
