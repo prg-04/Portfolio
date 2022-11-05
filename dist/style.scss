@@ -46,7 +46,6 @@ $navy2: #091e42;
   line-height: 1.6em;
 }
 
-
 .navigation {
   display: flex;
   background: $black2;
@@ -60,15 +59,30 @@ $navy2: #091e42;
   display: flex;
   margin-left: 2.5rem;
   h2 {
-    a {
-      font-family: $inter;
+    animation-name: logo;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes logo {
+    0% {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  a {
+    font-family: $inter;
     font-style: normal;
     font-weight: weight(bold);
     font-size: 18px;
-line-height: 24px;
-
+    line-height: 24px;
     color: $base-white;
-    }
   }
 }
 
@@ -350,7 +364,7 @@ line-height: 24px;
     width: 370px;
     background-color: $primary;
     color: $base-white;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border: none;
     &:hover {
       transform: translateY(5px);
@@ -470,71 +484,60 @@ line-height: 24px;
 
 #contact {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
+}
+
+.contact-text {
+  display: flex;
   justify-content: center;
   align-items: center;
-
-  .contact-text {
-    display: flex;
-    width: 327px;
-    height: 216px;
-    margin: 5rem 1rem 3rem 0;
-    p {
-      font-family: $inter;
-      font-style: normal;
-      font-weight: weight(bold);
-      font-size: 32px;
-      line-height: 44px;
-      color: $base-navy;
-    }
+  width: 327px;
+  height: 216px;
+  margin: 6rem 1rem 3rem 2rem;
+  p {
+    font-family: $inter;
+    font-style: normal;
+    font-weight: weight(bold);
+    font-size: 32px;
+    line-height: 44px;
+    color: $base-navy;
   }
 }
 
 .form {
-  margin-top: 10rem;
+  display: none;
+}
+
+.form2 {
   fieldset {
-    width: 384px;
-    height: 350px;
-    position: relative;
+    width: 328px;
+    height: 400px;
     border: none;
-    .input-group {
+    input {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      margin-left: 1rem;
       width: 100%;
-      input {
-        height: 35px;
-      }
-
-      
-      input,
-      textarea {
-        margin-left: 1rem;
-        padding: 15px;
-        width: 100%;
-        border: none;
-        
-        
-      }
-      input {
-        border-bottom: 1px solid $gray3;
-      }
-
-      input:focus,
-      textarea:focus {
-        outline: none;
-      }
-
-      textarea {
-        background-color: #fbf8f7;
-      }
-      .fullN,
-      #fullName {
-        display: block;
-      }
+      border: none;
+      border-bottom: 1px solid $gray3;
     }
-    .allNames {
-      display: none;
+
+    input:focus,
+    textarea:focus {
+      outline: none;
     }
+
+    textarea {
+      background-color: #e7e5e5;
+    }
+
     button {
-      margin-top: 1.5rem;
       width: 122px;
       height: 48px;
       background-color: $primary;
@@ -545,11 +548,24 @@ line-height: 24px;
       font-weight: weight(bold);
       font-size: 17px;
       line-height: 24px;
-      margin-left: 9rem;
+      margin-left: 8em;
+      margin-top: 1rem;
     }
+  }
+}
 
-    #email {
-      margin-bottom: 1rem;
+.copyright {
+  border-top: 1px solid#DFE1E6;
+  margin-top: 8rem;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 15px;
+      a {
+        font-size: 1.5em;
+        color: $fade-gray;
+      }
     }
   }
 }
@@ -644,37 +660,74 @@ line-height: 24px;
   #contact {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
   }
-  
-  .contact-text {
-    display: flex;
-    p {
-      color: $secondary;
-      font-family: $inter;
-      font-style: normal;
-      font-weight: weight(bold);
-      font-size: 40px;
-      line-height: 52px;
+  .form {
+    display: none;
+  }
+
+  .form2 {
+    margin-top: 8rem;
+    margin-right: 2rem;
+    fieldset {
+      width: 328px;
+      height: 400px;
+      border: none;
+      input {
+        margin-bottom: 1rem;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $gray3;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+
+      textarea {
+        background-color: #e7e5e5;
+      }
+
+      button {
+        width: 122px;
+        height: 48px;
+        background-color: $primary;
+        color: $base-white;
+        border: none;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: weight(bold);
+        font-size: 17px;
+        line-height: 24px;
+        margin-left: 8em;
+        margin-top: 1rem;
+      }
     }
-  
-    .form {
-      fieldset {
-        width: 684px;
-        height: 330px;
-        .fullN,
-        #fullName {
-          display: none;
-        }
-  
-        .allNames {
-          display: flex;
+  }
+
+  .copyright {
+    border-top: 1px solid#DFE1E6;
+    margin-top: 8rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 15px;
+        a {
+          font-size: 1.5em;
+          color: $fade-gray;
         }
       }
     }
-}
+  }
 }
 @media (min-width: 48em) {
   .logo {
@@ -700,7 +753,7 @@ line-height: 24px;
     .socials {
       grid-column: 1/2;
       position: relative;
-        top: 10%;
+      top: 10%;
       ul {
         display: flex;
         position: relative;
@@ -728,7 +781,6 @@ line-height: 24px;
     gap: 10px;
     .title {
       width: 100%;
-
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -807,35 +859,93 @@ line-height: 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
   }
 
   .contact-text {
+    margin-top: 8rem;
     margin-left: 3rem;
+    width: 455px;
+    height: 256px;
   }
   .form {
+    margin-top: 4rem;
+    display: block;
     fieldset {
       width: 684px;
       height: 330px;
-      .fullN,
-      #fullName {
-        display: none;
+      border: none;
+      input {
+        margin-bottom: 1rem;
       }
 
-      .allNames {
+      input,
+      textarea {
+        width: 85%;
+        padding: 1em;
+        border: none;
+      }
+
+      input {
+        border-bottom: 1px solid $gray3;
+      }
+
+      textarea {
+        background-color: #fbf8f7;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+
+      .names {
         display: flex;
+        justify-content: space-between;
       }
 
-      #firstName {
-        width: 90%;
+      .firstN {
+        position: relative;
+        width: 40%;
       }
 
-      #lastName {
-        margin-left: 3rem;
-        width:90%;
+      .lastN {
+        position: relative;
+        left: -10%;
+        width: 40%;
       }
 
       button {
-        margin-left: 1rem;
+        width: 122px;
+        height: 48px;
+        background-color: $primary;
+        color: $base-white;
+        border: none;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: weight(bold);
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .form2 {
+    display: none;
+  }
+
+  .copyright {
+    border-top: 1px solid #dfe1e6;
+    margin-top: 8rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 15px;
+        a {
+          font-size: 2em;
+          color: $fade-gray;
+        }
       }
     }
   }

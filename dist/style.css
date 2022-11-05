@@ -18,7 +18,35 @@
   display: flex;
   margin-left: 2.5rem;
 }
-.logo h2 a {
+.logo h2 {
+  -webkit-animation-name: logo;
+          animation-name: logo;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes logo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes logo {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.logo a {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -429,17 +457,20 @@
 
 #contact {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
+}
+
+.contact-text {
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-#contact .contact-text {
-  display: flex;
   width: 327px;
   height: 216px;
-  margin: 5rem 1rem 3rem 0;
+  margin: 6rem 1rem 3rem 2rem;
 }
-#contact .contact-text p {
+.contact-text p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -449,46 +480,33 @@
 }
 
 .form {
-  margin-top: 10rem;
-}
-.form fieldset {
-  width: 384px;
-  height: 350px;
-  position: relative;
-  border: none;
-}
-.form fieldset .input-group {
-  width: 100%;
-}
-.form fieldset .input-group input {
-  height: 35px;
-}
-.form fieldset .input-group input,
-.form fieldset .input-group textarea {
-  margin-left: 1rem;
-  padding: 15px;
-  width: 100%;
-  border: none;
-}
-.form fieldset .input-group input {
-  border-bottom: 1px solid #dbd8d7;
-}
-.form fieldset .input-group input:focus,
-.form fieldset .input-group textarea:focus {
-  outline: none;
-}
-.form fieldset .input-group textarea {
-  background-color: #fbf8f7;
-}
-.form fieldset .input-group .fullN,
-.form fieldset .input-group #fullName {
-  display: block;
-}
-.form fieldset .allNames {
   display: none;
 }
-.form fieldset button {
-  margin-top: 1.5rem;
+
+.form2 fieldset {
+  width: 328px;
+  height: 400px;
+  border: none;
+}
+.form2 fieldset input {
+  margin-bottom: 1rem;
+}
+.form2 fieldset input,
+.form2 fieldset textarea {
+  padding: 10px;
+  margin-left: 1rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dbd8d7;
+}
+.form2 fieldset input:focus,
+.form2 fieldset textarea:focus {
+  outline: none;
+}
+.form2 fieldset textarea {
+  background-color: #e7e5e5;
+}
+.form2 fieldset button {
   width: 122px;
   height: 48px;
   background-color: #ff6b00;
@@ -499,10 +517,24 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  margin-left: 9rem;
+  margin-left: 8em;
+  margin-top: 1rem;
 }
-.form fieldset #email {
-  margin-bottom: 1rem;
+
+.copyright {
+  border-top: 1px solid #DFE1E6;
+  margin-top: 8rem;
+}
+.copyright ul {
+  display: flex;
+  justify-content: center;
+}
+.copyright ul li {
+  margin: 15px;
+}
+.copyright ul li a {
+  font-size: 1.5em;
+  color: #505f79;
 }
 
 @media (min-width: 450px) and (max-width: 767px) {
@@ -585,31 +617,67 @@
   #contact {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
   }
-  .contact-text {
-    display: flex;
-  }
-  .contact-text p {
-    color: #1c1a19;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
-  }
-  .contact-text .form fieldset {
-    width: 684px;
-    height: 330px;
-  }
-  .contact-text .form fieldset .fullN,
-.contact-text .form fieldset #fullName {
+  .form {
     display: none;
   }
-  .contact-text .form fieldset .allNames {
+  .form2 {
+    margin-top: 8rem;
+    margin-right: 2rem;
+  }
+  .form2 fieldset {
+    width: 328px;
+    height: 400px;
+    border: none;
+  }
+  .form2 fieldset input {
+    margin-bottom: 1rem;
+  }
+  .form2 fieldset input,
+.form2 fieldset textarea {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #dbd8d7;
+  }
+  .form2 fieldset input:focus,
+.form2 fieldset textarea:focus {
+    outline: none;
+  }
+  .form2 fieldset textarea {
+    background-color: #e7e5e5;
+  }
+  .form2 fieldset button {
+    width: 122px;
+    height: 48px;
+    background-color: #ff6b00;
+    color: #fff;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    margin-left: 8em;
+    margin-top: 1rem;
+  }
+  .copyright {
+    border-top: 1px solid #DFE1E6;
+    margin-top: 8rem;
+  }
+  .copyright ul {
     display: flex;
+    justify-content: center;
+  }
+  .copyright ul li {
+    margin: 15px;
+  }
+  .copyright ul li a {
+    font-size: 1.5em;
+    color: #505f79;
   }
 }
 @media (min-width: 48em) {
@@ -732,29 +800,83 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
   }
   .contact-text {
+    margin-top: 8rem;
     margin-left: 3rem;
+    width: 455px;
+    height: 256px;
+  }
+  .form {
+    margin-top: 4rem;
+    display: block;
   }
   .form fieldset {
     width: 684px;
     height: 330px;
+    border: none;
   }
-  .form fieldset .fullN,
-.form fieldset #fullName {
-    display: none;
+  .form fieldset input {
+    margin-bottom: 1rem;
   }
-  .form fieldset .allNames {
+  .form fieldset input,
+.form fieldset textarea {
+    width: 85%;
+    padding: 1em;
+    border: none;
+  }
+  .form fieldset input {
+    border-bottom: 1px solid #dbd8d7;
+  }
+  .form fieldset textarea {
+    background-color: #fbf8f7;
+  }
+  .form fieldset input:focus,
+.form fieldset textarea:focus {
+    outline: none;
+  }
+  .form fieldset .names {
     display: flex;
+    justify-content: space-between;
   }
-  .form fieldset #firstName {
-    width: 90%;
+  .form fieldset .firstN {
+    position: relative;
+    width: 40%;
   }
-  .form fieldset #lastName {
-    margin-left: 3rem;
-    width: 90%;
+  .form fieldset .lastN {
+    position: relative;
+    left: -10%;
+    width: 40%;
   }
   .form fieldset button {
-    margin-left: 1rem;
+    width: 122px;
+    height: 48px;
+    background-color: #ff6b00;
+    color: #fff;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+  }
+  .form2 {
+    display: none;
+  }
+  .copyright {
+    border-top: 1px solid #dfe1e6;
+    margin-top: 8rem;
+  }
+  .copyright ul {
+    display: flex;
+    justify-content: center;
+  }
+  .copyright ul li {
+    margin: 15px;
+  }
+  .copyright ul li a {
+    font-size: 2em;
+    color: #505f79;
   }
 }/*# sourceMappingURL=style.css.map */
