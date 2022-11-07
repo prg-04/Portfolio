@@ -867,6 +867,16 @@ $navy2: #091e42;
     margin-left: 3rem;
     width: 455px;
     height: 256px;
+    p {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: $inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      color: #262626;
+    }
   }
 
   .form2 {
@@ -905,37 +915,48 @@ $navy2: #091e42;
       }
 
       .names {
+        max-width: 100%;
         display: flex;
         justify-content: space-between;
       }
 
       .firstN {
         position: relative;
+        width: 40%;
+      }
+
+      .lastN {
+        position: relative;
         left: -10%;
         width: 40%;
       }
 
       button {
-        width: 122px;
         height: 48px;
+        background-color: $primary;
         color: $base-white;
+        border: none;
+        font-family: $roboto;
+        font-style: normal;
         font-weight: weight(bold);
         font-size: 17px;
         line-height: 24px;
+        margin-left: 0;
+        margin-top: 1rem;
       }
-      .copyright {
-        border-top: 1px solid #dfe1e6;
-        margin-top: 8rem;
-        ul {
-          display: flex;
-          justify-content: center;
-          li {
-            margin: 15px;
-            a {
-              font-size: 2em;
-              color: $fade-gray;
-            }
-          }
+    }
+  }
+  .copyright {
+    border-top: 1px solid #dfe1e6;
+    margin-top: 8rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 15px;
+        a {
+          font-size: 2em;
+          color: $fade-gray;
         }
       }
     }
