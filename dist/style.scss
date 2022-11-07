@@ -711,19 +711,19 @@ $navy2: #091e42;
         margin-top: 1rem;
       }
     }
-  }
 
-  .copyright {
-    border-top: 1px solid#DFE1E6;
-    margin-top: 8rem;
-    ul {
-      display: flex;
-      justify-content: center;
-      li {
-        margin: 15px;
-        a {
-          font-size: 1.5em;
-          color: $fade-gray;
+    .copyright {
+      border-top: 1px solid#DFE1E6;
+      margin-top: 8rem;
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          margin: 15px;
+          a {
+            font-size: 1.5em;
+            color: $fade-gray;
+          }
         }
       }
     }
