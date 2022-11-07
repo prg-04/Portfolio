@@ -180,7 +180,7 @@ $navy2: #091e42;
 
 .intro {
   background-color: $black1;
-  background-image: url("/images/hd2.png");
+  background-image: url("./images/hd2.png");
   background-repeat: no-repeat;
   background-position: 100% 60%;
   max-width: 100%;
@@ -376,24 +376,24 @@ $navy2: #091e42;
 
 .cd1,
 .cd4 {
-  background-image: url("/images/cd1.jpg");
+  background-image: url("./images/cd1.jpg");
   background-repeat: no-repeat;
 }
 .cd2,
 .cd5 {
-  background-image: url("/images/cd2.jpg");
+  background-image: url("./images/cd2.jpg");
   background-repeat: no-repeat;
 }
 .cd3,
 .cd6 {
-  background-image: url("/images/cd3.jpg");
+  background-image: url("./images/cd3.jpg");
   background-repeat: no-repeat;
 }
 
 #about {
   background-color: $secondary;
   width: 100%;
-  background-image: url("/images/abt1.png");
+  background-image: url("./images/abt1.png");
   background-position: 100% 23%;
   background-repeat: no-repeat;
   hr {
@@ -572,7 +572,7 @@ $navy2: #091e42;
 
 @media (min-width: 450px) and (max-width: 767px) {
   .intro {
-    background-image: url("/images/hd.png");
+    background-image: url("./images/hd.png");
     background-position: 100% 70%;
     background-size: 400px;
   }
@@ -646,7 +646,7 @@ $navy2: #091e42;
     grid-row: 5/6;
   }
   #about {
-    background-image: url("/images/abt1.png");
+    background-image: url("./images/abt1.png");
     background-repeat: no-repeat;
     background-position: 100% 20%;
   }
@@ -667,7 +667,7 @@ $navy2: #091e42;
   .form {
     display: none;
   }
-  
+
   .form2 {
     margin-top: 8rem;
     margin-right: 2rem;
@@ -746,7 +746,7 @@ $navy2: #091e42;
 
   .intro {
     display: grid;
-    background-image: url("/images/hd.png");
+    background-image: url("./images/hd.png");
     background-size: 500px;
     background-position: 100% 60%;
     grid-template-columns: 10% 80%;
@@ -844,7 +844,7 @@ $navy2: #091e42;
     }
   }
   #about {
-    background-image: url("/images/abt.png");
+    background-image: url("./images/abt.png");
     background-repeat: no-repeat;
     background-position: 100% 15%;
     background-size: 450px;
@@ -905,25 +905,32 @@ $navy2: #091e42;
       }
 
       .firstN {
-        position: relative;eft: -10%;
+        position: relative;
+        left: -10%;
         width: 40%;
       }
 
       button {
         width: 122px;
-        height: 48px;color: $base-white;t-weight: weight(bold);
+        height: 48px;
+        color: $base-white;
+        font-weight: weight(bold);
         font-size: 17px;
-        line-height: 24px;yright {
-    border-top: 1px solid #dfe1e6;
-    margin-top: 8rem;
-    ul {
-      display: flex;
-      justify-content: center;
-      li {
-        margin: 15px;
-        a {
-          font-size: 2em;
-          color: $fade-gray;
+        line-height: 24px;
+      }
+      .copyright {
+        border-top: 1px solid #dfe1e6;
+        margin-top: 8rem;
+        ul {
+          display: flex;
+          justify-content: center;
+          li {
+            margin: 15px;
+            a {
+              font-size: 2em;
+              color: $fade-gray;
+            }
+          }
         }
       }
     }
