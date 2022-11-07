@@ -667,7 +667,7 @@ $navy2: #091e42;
   .form {
     display: none;
   }
-
+  
   .form2 {
     margin-top: 8rem;
     margin-right: 2rem;
@@ -905,36 +905,15 @@ $navy2: #091e42;
       }
 
       .firstN {
-        position: relative;
-        width: 40%;
-      }
-
-      .lastN {
-        position: relative;
-        left: -10%;
+        position: relative;eft: -10%;
         width: 40%;
       }
 
       button {
         width: 122px;
-        height: 48px;
-        background-color: $primary;
-        color: $base-white;
-        border: none;
-        font-family: $roboto;
-        font-style: normal;
-        font-weight: weight(bold);
+        height: 48px;color: $base-white;t-weight: weight(bold);
         font-size: 17px;
-        line-height: 24px;
-      }
-    }
-  }
-
-  .form2 {
-    display: none;
-  }
-
-  .copyright {
+        line-height: 24px;yright {
     border-top: 1px solid #dfe1e6;
     margin-top: 8rem;
     ul {
