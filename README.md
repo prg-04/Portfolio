@@ -18,7 +18,7 @@
 
 - Visual Studio Code,Atom or your preferred IDE
 - MAC, Linux, Windows Vista or newer
--GitHub account
+  -GitHub account
 
 ### Install
 
@@ -31,6 +31,7 @@
 ### Deployment
 
 - You can access the files in the Portfolio folder and open the index.html using your brow
+
 ## Authors
 
 👤 **Evans Karanja**
