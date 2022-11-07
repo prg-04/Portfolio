@@ -808,6 +808,16 @@
     width: 455px;
     height: 256px;
   }
+  .contact-text p {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: #262626;
+  }
   .form2 {
     display: none;
   }
@@ -840,34 +850,44 @@
     outline: none;
   }
   .form fieldset .names {
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
   }
   .form fieldset .firstN {
     position: relative;
+    width: 40%;
+  }
+  .form fieldset .lastN {
+    position: relative;
     left: -10%;
     width: 40%;
   }
   .form fieldset button {
-    width: 122px;
     height: 48px;
+    background-color: #ff6b00;
     color: #fff;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
+    margin-left: 0;
+    margin-top: 1rem;
   }
-  .form fieldset .copyright {
+  .copyright {
     border-top: 1px solid #dfe1e6;
     margin-top: 8rem;
   }
-  .form fieldset .copyright ul {
+  .copyright ul {
     display: flex;
     justify-content: center;
   }
-  .form fieldset .copyright ul li {
+  .copyright ul li {
     margin: 15px;
   }
-  .form fieldset .copyright ul li a {
+  .copyright ul li a {
     font-size: 2em;
     color: #505f79;
   }
