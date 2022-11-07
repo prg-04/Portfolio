@@ -664,18 +664,18 @@
     margin-left: 8em;
     margin-top: 1rem;
   }
-  .copyright {
+  .form2 .copyright {
     border-top: 1px solid #DFE1E6;
     margin-top: 8rem;
   }
-  .copyright ul {
+  .form2 .copyright ul {
     display: flex;
     justify-content: center;
   }
-  .copyright ul li {
+  .form2 .copyright ul li {
     margin: 15px;
   }
-  .copyright ul li a {
+  .form2 .copyright ul li a {
     font-size: 1.5em;
     color: #505f79;
   }
@@ -807,6 +807,9 @@
     margin-left: 3rem;
     width: 455px;
     height: 256px;
+  }
+  .form2 {
+    display: none;
   }
   .form {
     margin-top: 4rem;
