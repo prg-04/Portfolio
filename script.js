@@ -15,10 +15,9 @@ toggleMenu.addEventListener("click", (e) => {
 });
 
 
-
 function closeMenu() {
   toggleMenu.classList.remove('open');
-  navLinks.classList.remove('open');
+  navlinks.classList.remove('open');
   menuOpen = false;
 }
 
