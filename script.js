@@ -117,15 +117,7 @@ const introData = intro.map((item) => {
 
 // socials
 
-const socials = intro.map((item) => {
-  const div = document.createElement("div");
-  const ul = document.createElement("ul");
-  div.className = item.cls1;
-  item.icns.map((icn) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-  });
-});
+
 
 // section
 const secData = section.map((elem) => {
