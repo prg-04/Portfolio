@@ -288,6 +288,7 @@
   color: #fff;
   border: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .plchdr .text button:hover {
   background-color: #fff5e1;
@@ -338,6 +339,7 @@
   color: #fff;
   transition: all 0.3s ease-in-out;
   border: none;
+  cursor: pointer;
 }
 .card button:hover {
   transform: translateY(5px);
@@ -535,6 +537,115 @@
 #copyright ul li a {
   font-size: 1.5em;
   color: #505f79;
+}
+
+.popup {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #fff;
+  position: absolute;
+  top: 150%;
+  left: 10%;
+  width: 343px;
+  height: 758px;
+}
+.popup .hd {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.popup .hd .hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup .hd .hdr .fa-solid {
+  color: #172b4d;
+  margin-right: 1rem;
+}
+.popup .hd h2 {
+  width: 95%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  color: #172b4d;
+}
+.popup .hd .hdg1 {
+  display: none;
+}
+.popup .hd ul {
+  display: flex;
+}
+.popup .hd ul li {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.popup .hd ul a {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #3c3a39;
+}
+.popup .pop-img {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 311px;
+  height: 220px;
+}
+.popup .pop-img .img1 {
+  display: none;
+}
+.popup .pop-img .img2 {
+  margin-left: 1rem;
+}
+.popup .pop-text {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.popup .pop-text p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+  margin: 1rem;
+}
+.popup .pop-text .btns {
+  display: flex;
+  justify-content: space-between;
+}
+.popup .pop-text .btns button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+  height: 48px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 20px;
+  background-color: #ff6b00;
+  color: #fff;
+  padding: 10px;
+  margin: 0 1rem;
+}
+.popup .pop-text .btns button span .fa-brands {
+  font-size: 1.7em;
+}
+
+.pWindow {
+  display: none;
+}
+
+.pWindow.open {
+  display: grid;
 }
 
 @media (min-width: 450px) and (max-width: 767px) {
@@ -784,6 +895,70 @@
   #portfolio .cd6 {
     grid-column: 3/4;
     grid-row: 4/5;
+  }
+  .popup {
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: repeat(2, 1fr);
+    width: 98%;
+    height: 631px;
+    position: absolute;
+    left: 15px;
+    top: 150%;
+  }
+  .popup .hd {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .popup .hd .fa-solid {
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+  .popup .hd .hdr {
+    display: flex;
+    justify-content: space-between;
+  }
+  .popup .hd ul {
+    display: flex;
+  }
+  .popup .hd ul li {
+    margin: 10px;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .popup .hd .hdg1 {
+    display: block;
+  }
+  .popup .hd .hdg2 {
+    display: none;
+  }
+  .popup .pop-img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 600px;
+    height: 448px;
+  }
+  .popup .pop-img .img1 {
+    display: block;
+    width: 100%;
+  }
+  .popup .pop-img .img2 {
+    display: none;
+  }
+  .popup .pop-text {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .popup .pop-text .btns {
+    margin-top: 3.5rem;
+  }
+  .pWindow {
+    display: none;
+  }
+  .pWindow.open {
+    display: grid;
   }
   #about {
     background-image: url("../images/abt.png");

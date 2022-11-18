@@ -62,6 +62,7 @@ const plchdr = [
     para: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     list: ["css", "html", "bootstrap", "ruby"],
     btn: "See Project",
+    cls3: "cProject",
   },
 ];
 
@@ -147,6 +148,9 @@ const copyright = [
     ],
   },
 ];
+
+const popUp = [{}];
+
 // intro
 
 const introData = intro.map((item) => {
@@ -199,43 +203,8 @@ const tlsData = title.map((elem) => {
 
 // placeholder
 
-const plchdrData = plchdr.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const div1 = document.createElement("div");
-  div1.className = elem.cls1;
-  const img = document.createElement("img");
-  img.src = elem.src;
-  img.alt = elem.alt;
-  div1.appendChild(img);
-  div.appendChild(div1);
-  const div2 = document.createElement("div");
-  div2.className = elem.cls2;
-  const h2 = document.createElement("h2");
-  h2.innerHTML = elem.h2;
-  div2.appendChild(h2);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div2.appendChild(para);
-  div.appendChild(div2);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    aTag.innerHTML = item;
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div2.appendChild(ul);
-  });
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div2.appendChild(btn);
-
-  return div;
-});
 
 // cards
-
 const cardData1 = cards.map((elem) => {
   const div = document.createElement("div");
   div.className = elem.cls;
@@ -499,54 +468,16 @@ const secData = section.map((elem) => {
   }
   document.body.appendChild(section);
 });
+const pWindow = document.querySelector(".pWindow");
 
-const contactData = form.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  return div;
+const seeProject = document.querySelector(".cProject");
+
+seeProject.addEventListener("click", () => {
+  pWindow.classList.add("open");
 });
 
-// forms
+const closePopUp = document.querySelector(".fa-x");
 
-const formData = form.map((elem) => {
-  const form = document.createElement("form");
-  form.className = elem.cls2;
-  form.action = elem.action;
-  form.method = elem.method;
-  const fieldset = document.createElement("fieldset");
-  const div = document.createElement("div");
-  div.className = elem.cls3;
-  const div1 = document.createElement("div");
-  div1.className = elem.cls4;
-  const label = document.createElement("label");
-  const input = document.createElement("input");
-  input.type = elem.type;
-  input.id = elem.id;
-  input.name = elem.name;
-  input.placeholder = elem.plchdr;
-  // input.required;
-  label.appendChild(input);
-  div1.appendChild(label);
-  div.appendChild(div1);
-  fieldset.appendChild(div);
-  form.appendChild(fieldset);
-  return form;
-});
-
-// footer
-const ftrData = footer.map((elem) => {
-  const footer = document.createElement("footer");
-  footer.id = elem;
-  if (footer.id === "contact") {
-    contactData.map((e) => {
-      footer.appendChild(e);
-    });
-    formData.map((e) => {
-      footer.appendChild(e);
-    });
-  }
-  document.body.appendChild(footer);
+closePopUp.addEventListener("click", () => {
+  pWindow.classList.remove("open");
 });
