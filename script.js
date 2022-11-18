@@ -20,10 +20,10 @@ toggleMenu.addEventListener("click", () => {
   navlinks.classList.toggle("open");
 });
 
-function closeMenu() {    
-  toggleMenu.classList.remove('open');    
-  navlinks.classList.remove('open');    
-  menuOpen = false;   
+function closeMenu() {
+  toggleMenu.classList.remove("open");
+  navlinks.classList.remove("open");
+  menuOpen = false;
 }
 
 const intro = [
@@ -122,8 +122,6 @@ const introData = intro.map((item) => {
 });
 
 // socials
-
-
 
 // section
 const secData = section.map((elem) => {
