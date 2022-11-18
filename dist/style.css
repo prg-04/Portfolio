@@ -147,7 +147,7 @@
   line-height: 2em;
 }
 
-.intro {
+#intro {
   background-color: #212121;
   background-image: url("../images/hd2.png");
   background-repeat: no-repeat;
@@ -521,24 +521,24 @@
   margin-top: 1rem;
 }
 
-.copyright {
+#copyright {
   border-top: 1px solid #DFE1E6;
   margin-top: 8rem;
 }
-.copyright ul {
+#copyright ul {
   display: flex;
   justify-content: center;
 }
-.copyright ul li {
+#copyright ul li {
   margin: 15px;
 }
-.copyright ul li a {
+#copyright ul li a {
   font-size: 1.5em;
   color: #505f79;
 }
 
 @media (min-width: 450px) and (max-width: 767px) {
-  .intro {
+  #intro {
     background-image: url("../images/hd.png");
     background-position: 100% 70%;
     background-size: 400px;
@@ -664,18 +664,18 @@
     margin-left: 8em;
     margin-top: 1rem;
   }
-  .form2 .copyright {
+  .form2 #copyright {
     border-top: 1px solid #DFE1E6;
     margin-top: 8rem;
   }
-  .form2 .copyright ul {
+  .form2 #copyright ul {
     display: flex;
     justify-content: center;
   }
-  .form2 .copyright ul li {
+  .form2 #copyright ul li {
     margin: 15px;
   }
-  .form2 .copyright ul li a {
+  .form2 #copyright ul li a {
     font-size: 1.5em;
     color: #505f79;
   }
@@ -690,19 +690,19 @@
   .toggle {
     display: none;
   }
-  .intro {
+  #intro {
     display: grid;
     background-image: url("../images/hd.png");
     background-size: 500px;
     background-position: 100% 60%;
     grid-template-columns: 10% 80%;
   }
-  .intro .socials {
+  #intro .socials {
     grid-column: 1/2;
     position: relative;
     top: 10%;
   }
-  .intro .socials ul {
+  #intro .socials ul {
     display: flex;
     position: relative;
     top: 10%;
@@ -710,10 +710,10 @@
     align-items: center;
     flex-direction: column;
   }
-  .intro .socials ul a {
+  #intro .socials ul a {
     font-size: 1.5em;
   }
-  .intro .intro-text {
+  #intro .intro-text {
     top: 20%;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -876,18 +876,18 @@
     margin-left: 0;
     margin-top: 1rem;
   }
-  .copyright {
+  #copyright {
     border-top: 1px solid #dfe1e6;
     margin-top: 8rem;
   }
-  .copyright ul {
+  #copyright ul {
     display: flex;
     justify-content: center;
   }
-  .copyright ul li {
+  #copyright ul li {
     margin: 15px;
   }
-  .copyright ul li a {
+  #copyright ul li a {
     font-size: 2em;
     color: #505f79;
   }
