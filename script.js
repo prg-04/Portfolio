@@ -202,7 +202,40 @@ const tlsData = title.map((elem) => {
 });
 
 // placeholder
-
+const plchdrData = plchdr.map((elem) => {
+  const div = document.createElement("div");
+  div.className = elem.cls;
+  const div1 = document.createElement("div");
+  div1.className = elem.cls1;
+  const img = document.createElement("img");
+  img.src = elem.src;
+  img.alt = elem.alt;
+  div1.appendChild(img);
+  div.appendChild(div1);
+  const div2 = document.createElement("div");
+  div2.className = elem.cls2;
+  const h2 = document.createElement("h2");
+  h2.innerHTML = elem.h2;
+  div2.appendChild(h2);
+  const para = document.createElement("p");
+  para.innerHTML = elem.para;
+  div2.appendChild(para);
+  div.appendChild(div2);
+  const ul = document.createElement("ul");
+  elem.list.map((item) => {
+    const li = document.createElement("li");
+    const aTag = document.createElement("a");
+    aTag.innerHTML = item;
+    li.appendChild(aTag);
+    ul.appendChild(li);
+    div2.appendChild(ul);
+  });
+  const btn = document.createElement("button");
+  btn.className = elem.cls3;
+  btn.innerHTML = elem.btn;
+  div2.appendChild(btn);
+  return div;
+});
 
 // cards
 const cardData1 = cards.map((elem) => {
