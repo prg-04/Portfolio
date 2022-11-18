@@ -20,6 +20,12 @@ toggleMenu.addEventListener("click", () => {
   navlinks.classList.toggle("open");
 });
 
+function closeMenu() {    
+  toggleMenu.classList.remove('open');    
+  navlinks.classList.remove('open');    
+  menuOpen = false;   
+}
+
 const intro = [
   {
     cls: "intro-text",
