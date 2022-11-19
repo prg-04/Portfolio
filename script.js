@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 /* eslint-disable quotes */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-vars */
@@ -135,6 +136,7 @@ const form = [
     name4: "fullName",
     plchdr4: "Full name",
     plchdr5: "name@gmail.com",
+    cls7: "form2",
   },
 ];
 
@@ -149,7 +151,33 @@ const copyright = [
   },
 ];
 
-const popUp = [{}];
+const popUp = [
+  {
+    cls: "popup pWindow",
+    cls1: "hd",
+    cls2: "hdg1",
+    cls3: "hdg2",
+    hd1: "Keeping track of hundreds of components website",
+    hd2: "Multi Post Stories",
+    icn: "fa-solid fa-x",
+    list: ["html", "bootstrap", "Ruby on Rails"],
+    cls4: "pop-img",
+    cls5: "img1",
+    cls6: "img2",
+    img: "../images/popDesktop.png",
+    img1: "../images/popMobile.png",
+    alt: "image 10",
+    cls7: "pop-text",
+    para: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
+    cls8: "btns",
+    btn: "See live",
+    btn2: "See Project",
+    img2: "../images/Icon.png",
+    alt1: "icon",
+    icn1: "fa-brands fa-github",
+    cls9: "hdr",
+  },
+];
 
 // intro
 
@@ -453,6 +481,85 @@ const sklSet = about.map((elem) => {
   return div;
 });
 
+// popUp
+
+const popData = popUp.map((elem) => {
+  const div = document.createElement("div");
+  div.className = elem.cls;
+  const div1 = document.createElement("div");
+  div1.className = elem.cls1;
+  const div2 = document.createElement("div");
+  div2.className = elem.cls9;
+  const h2 = document.createElement("h2");
+  h2.className = elem.cls2;
+  h2.innerHTML = elem.hd1;
+  div2.appendChild(h2);
+  const h21 = document.createElement("h2");
+  h21.className = elem.cls3;
+  h21.innerHTML = elem.hd2;
+  div2.appendChild(h21);
+  const span = document.createElement("span");
+  const icn = document.createElement("i");
+  icn.className = elem.icn;
+  span.appendChild(icn);
+  div2.appendChild(span);
+  div1.appendChild(div2);
+  div.appendChild(div1);
+
+  const ul = document.createElement("ul");
+  elem.list.map((item) => {
+    const li = document.createElement("li");
+    li.innerHTML = item;
+    ul.appendChild(li);
+    div1.appendChild(ul);
+  });
+
+  const div3 = document.createElement("div");
+  div3.className = elem.cls4;
+  const img = document.createElement("img");
+  img.className = elem.cls5;
+  img.src = elem.img;
+  img.alt = elem.alt;
+  div3.appendChild(img);
+  const img1 = document.createElement("img");
+  img1.className = elem.cls6;
+  img1.src = elem.img1;
+  img1.alt = elem.alt;
+  div3.appendChild(img1);
+  div.appendChild(div3);
+
+  const div4 = document.createElement("div");
+  div4.className = elem.cls7;
+  const para = document.createElement("p");
+  para.innerHTML = elem.para;
+  div4.appendChild(para);
+
+  // btns
+  const div5 = document.createElement("div");
+  div5.className = elem.cls8;
+  const btn = document.createElement("button");
+  btn.innerHTML = elem.btn;
+  const spanImg = document.createElement("span");
+  const img2 = document.createElement("img");
+  img2.src = elem.img2;
+  img2.alt = elem.alt1;
+  spanImg.appendChild(img2);
+  btn.appendChild(spanImg);
+  div5.appendChild(btn);
+  div4.appendChild(div5);
+
+  const btn2 = document.createElement("button");
+  btn2.innerHTML = elem.btn2;
+  const spanIcon = document.createElement("span");
+  const icon = document.createElement("i");
+  icon.className = elem.icn1;
+  spanIcon.appendChild(icon);
+  btn2.appendChild(spanIcon);
+  div5.appendChild(btn2);
+  div.appendChild(div4);
+  return div;
+});
+
 // section
 const secData = section.map((elem) => {
   const section = document.createElement("section");
@@ -469,6 +576,9 @@ const secData = section.map((elem) => {
       section.appendChild(e);
     });
     plchdrData.map((e) => {
+      section.appendChild(e);
+    });
+    popData.map((e) => {
       section.appendChild(e);
     });
     cardData1.map((e) => {
@@ -499,8 +609,205 @@ const secData = section.map((elem) => {
       section.appendChild(e);
     });
   }
+
   document.body.appendChild(section);
 });
+
+const contactData = form.map((elem) => {
+  const div = document.createElement("div");
+  div.className = elem.cls;
+  const para = document.createElement("p");
+  para.innerHTML = elem.para;
+  div.appendChild(para);
+  return div;
+});
+
+const formData = form.map((elem) => {
+  const form = document.createElement("form");
+  form.action = elem.action;
+  form.method = elem.method;
+  form.className = elem.cls2;
+  const fieldset = document.createElement("fieldset");
+  const div = document.createElement("div");
+  div.className = elem.cls3;
+  // first name
+  const div1 = document.createElement("div");
+  div1.className = elem.cls4;
+  const label = document.createElement("label");
+  const input = document.createElement("input");
+  input.type = elem.type;
+  input.id = elem.id;
+  input.name = elem.name;
+  input.placeholder = elem.plchdr;
+  input.setAttribute = "required";
+  label.appendChild(input);
+  div1.appendChild(label);
+  div.appendChild(div1);
+  fieldset.appendChild(div);
+  form.appendChild(fieldset);
+
+  // last name
+  const div2 = document.createElement("div");
+  div2.className = elem.cls5;
+  const label2 = document.createElement("label");
+  const input2 = document.createElement("input");
+  input2.type = elem.type;
+  input2.id = elem.id1;
+  input2.name = elem.name1;
+  input2.placeholder = elem.plchdr1;
+  input2.setAttribute = "required";
+  label2.appendChild(input2);
+  div2.appendChild(label2);
+  div.appendChild(div2);
+  fieldset.appendChild(div);
+  form.appendChild(fieldset);
+
+  // email
+
+  const div3 = document.createElement("div");
+  div3.className = elem.cls6;
+  const label3 = document.createElement("label");
+  const input3 = document.createElement("input");
+  input3.type = elem.type1;
+  input3.id = elem.id2;
+  input3.name = elem.name2;
+  input3.placeholder = elem.plchdr2;
+  input3.setAttribute = "required";
+  label3.appendChild(input3);
+  div3.appendChild(label3);
+  fieldset.appendChild(div3);
+  form.appendChild(fieldset);
+
+  // textarea
+  const div4 = document.createElement("div");
+  div4.className = elem.cls6;
+  const label4 = document.createElement("label");
+  const textarea = document.createElement("textarea");
+  textarea.id = elem.id3;
+  textarea.name = elem.name3;
+  textarea.cols = elem.cols;
+  textarea.rows = elem.rows;
+  textarea.minLength = elem.minL;
+  textarea.placeholder = elem.plchdr3;
+  textarea.setAttribute = "required";
+  label4.appendChild(textarea);
+  div4.appendChild(label4);
+  fieldset.appendChild(div4);
+  form.appendChild(fieldset);
+
+  // btn
+
+  const btn = document.createElement("button");
+  btn.type = elem.type2;
+  btn.innerHTML = elem.btn;
+  fieldset.appendChild(btn);
+  return form;
+});
+
+// form2
+
+const formData2 = form.map((elem) => {
+  const form2 = document.createElement("form");
+  form2.action = elem.action;
+  form2.method = elem.method;
+  form2.className = elem.cls7;
+  const fieldset = document.createElement("fieldset");
+
+  // full name
+  const div1 = document.createElement("div");
+  div1.className = elem.cls6;
+  const label = document.createElement("label");
+  const input = document.createElement("input");
+  input.type = elem.type;
+  input.id = elem.id4;
+  input.name = elem.name4;
+  input.placeholder = elem.plchdr4;
+  input.setAttribute = "required";
+  label.appendChild(input);
+  div1.appendChild(label);
+  fieldset.appendChild(div1);
+  form2.appendChild(fieldset);
+
+  // email
+
+  const div3 = document.createElement("div");
+  div3.className = elem.cls6;
+  const label3 = document.createElement("label");
+  const input3 = document.createElement("input");
+  input3.type = elem.type1;
+  input3.id = elem.id2;
+  input3.name = elem.name2;
+  input3.placeholder = elem.plchdr5;
+  input3.setAttribute = "required";
+  label3.appendChild(input3);
+  div3.appendChild(label3);
+  fieldset.appendChild(div3);
+  form2.appendChild(fieldset);
+
+  // textarea
+  const div4 = document.createElement("div");
+  div4.className = elem.cls6;
+  const label4 = document.createElement("label");
+  const textarea = document.createElement("textarea");
+  textarea.id = elem.id3;
+  textarea.name = elem.name3;
+  textarea.cols = elem.cols;
+  textarea.rows = elem.rows;
+  textarea.minLength = elem.minL;
+  textarea.placeholder = elem.plchdr3;
+  textarea.setAttribute = "required";
+  label4.appendChild(textarea);
+  div4.appendChild(label4);
+  fieldset.appendChild(div4);
+  form2.appendChild(fieldset);
+
+  // btn
+
+  const btn = document.createElement("button");
+  btn.type = elem.type2;
+  btn.innerHTML = elem.btn;
+  fieldset.appendChild(btn);
+  return form2;
+});
+
+// copyright
+
+const copyrightData = copyright.map((item) => {
+  const ul = document.createElement("ul");
+  item.icns.map((icn) => {
+    const li = document.createElement("li");
+    const aTag = document.createElement("a");
+    const icon = document.createElement("i");
+    icon.className = icn;
+    aTag.appendChild(icon);
+    li.appendChild(aTag);
+    ul.appendChild(li);
+  });
+  return ul;
+});
+
+// footer
+const footerData = footer.map((elem) => {
+  const footer = document.createElement("footer");
+  footer.id = elem;
+  if (footer.id === "contact") {
+    contactData.map((item) => {
+      footer.appendChild(item);
+    });
+    formData.map((item) => {
+      footer.appendChild(item);
+    });
+    formData2.map((item) => {
+      footer.appendChild(item);
+    });
+  } else if (footer.id === "copyright") {
+    copyrightData.map((elem) => {
+      footer.appendChild(elem);
+    });
+  }
+  document.body.appendChild(footer);
+});
+
 const pWindow = document.querySelector(".pWindow");
 
 const seeProject = document.querySelector(".cProject");

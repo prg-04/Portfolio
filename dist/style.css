@@ -485,6 +485,9 @@
   display: none;
 }
 
+.form2 {
+  margin-top: 1rem;
+}
 .form2 fieldset {
   width: 328px;
   height: 400px;
@@ -552,11 +555,13 @@
 .popup .hd {
   grid-column: 1/2;
   grid-row: 1/2;
+  width: 100%;
 }
 .popup .hd .hdr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .popup .hd .hdr .fa-solid {
   color: #172b4d;
@@ -658,6 +663,31 @@
     display: grid;
     max-width: 100%;
     grid-template-columns: repeat(2, 1fr);
+  }
+  #portfolio .popup {
+    width: 80%;
+    left: 15%;
+    max-width: 500px;
+  }
+  #portfolio .popup .pop-text p {
+    width: 70%;
+  }
+  #portfolio .popup .pop-text .btns {
+    justify-content: start;
+  }
+  #portfolio .popup .pop-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-left: 20px;
+  }
+  #portfolio .popup .pop-img .img1 {
+    display: none;
+  }
+  #portfolio .popup .pop-img .img2 {
+    display: block;
+    max-width: 100%;
+    margin-left: 1rem;
   }
   .title {
     display: flex;
@@ -953,6 +983,10 @@
   }
   .popup .pop-text .btns {
     margin-top: 3.5rem;
+    justify-content: start;
+  }
+  .popup .pop-text .btns button {
+    margin-right: 0;
   }
   .pWindow {
     display: none;
