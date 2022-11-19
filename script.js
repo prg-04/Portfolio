@@ -1,13 +1,16 @@
+/* eslint-disable no-cond-assign */
+/* eslint-disable no-plusplus */
 /* eslint-disable no-constant-condition */
 /* eslint-disable quotes */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-vars */
 /* eslint-disable linebreak-style */
+
 const toggleMenu = document.querySelector(".toggle");
 const navlinks = document.querySelector(".navlinks");
 let menuOpen = false;
 
-toggleMenu.addEventListener("click", (e) => {
+toggleMenu.addEventListener("click", () => {
   if (!menuOpen) {
     toggleMenu.classList.add("open");
     menuOpen = true;
@@ -43,6 +46,7 @@ const intro = [
 ];
 
 const section = ["intro", "portfolio", "about"];
+
 const footer = ["contact", "copyright"];
 
 const title = [
@@ -63,7 +67,9 @@ const plchdr = [
     para: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
     list: ["css", "html", "bootstrap", "ruby"],
     btn: "See Project",
+
     cls3: "cProject",
+
   },
 ];
 
@@ -75,6 +81,7 @@ const cards = [
     cls3: "card cd4",
     cls4: "card cd5",
     cls5: "card cd6",
+
     h3: "Professional Art Printing Data",
     para: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
     list: ["css", "html", "bootstrap"],
@@ -178,6 +185,7 @@ const popUp = [
     cls9: "hdr",
   },
 ];
+
 
 // intro
 
@@ -560,6 +568,7 @@ const popData = popUp.map((elem) => {
   return div;
 });
 
+
 // section
 const secData = section.map((elem) => {
   const section = document.createElement("section");
@@ -821,3 +830,4 @@ const closePopUp = document.querySelector(".fa-x");
 closePopUp.addEventListener("click", () => {
   pWindow.classList.remove("open");
 });
+
