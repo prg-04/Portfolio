@@ -69,7 +69,6 @@ const plchdr = [
     btn: "See Project",
 
     cls3: "cProject",
-
   },
 ];
 
@@ -185,7 +184,6 @@ const popUp = [
     cls9: "hdr",
   },
 ];
-
 
 // intro
 
@@ -568,7 +566,6 @@ const popData = popUp.map((elem) => {
   return div;
 });
 
-
 // section
 const secData = section.map((elem) => {
   const section = document.createElement("section");
@@ -830,4 +827,3 @@ const closePopUp = document.querySelector(".fa-x");
 closePopUp.addEventListener("click", () => {
   pWindow.classList.remove("open");
 });
-
