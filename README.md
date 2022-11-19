@@ -41,11 +41,12 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
-> HTML, CSS and Javascript
+**[HTM]**
+**[CSS]**
+**[Javascript]**
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - **[Responsive Design]**
 - **[Good accesibility]**
@@ -67,11 +68,11 @@
 
 To get a local copy up and running, follow these steps.
 
-    * First you need to have an IDE installed in your PC. You also need to have a   github account in order to clone the code to your local repository
-    * Login to your github account and search for 'prg-04/Portfolio'
-    * Click the green 'code' button and copy the HTTPS url.
-    * Open the your preferred IDE and open the terminal window. Write the         following commands in the terminal 'git clone' followed by the url link you copied and press Enter on your keyboard. Git will start cloning the repository into your selected folder.
-    * After cloning the repository change the directory using 'cd Portfolio' to access the files.
+    - First you need to have an IDE installed in your PC. You also need to have a   github account in order to clone the code to your local repository
+    - Login to your github account and search for 'prg-04/Portfolio'
+    - Click the green 'code' button and copy the HTTPS url.
+    - Open the your preferred IDE and open the terminal window. Write the         following commands in the terminal 'git clone' followed by the url link you copied and press Enter on your keyboard. Git will start cloning the repository into your selected folder.
+    - After cloning the repository change the directory using 'cd Portfolio' to access the files.
 
 ### Prerequisites
 
