@@ -46,7 +46,6 @@ const worksInfo = [
     srcLink: 'https://github.com/prg-04/Portfolio/',
   },
 ];
-
 const popUpInfo = [
   {
     classes: [
@@ -85,7 +84,6 @@ worksInfo.map((elem) =>
     div.className = e;
     return portfolio.appendChild(div);
   }));
-
 const plchdr = document.querySelector('.plchdr');
 const img = document.querySelector('.img');
 const text = document.querySelector('.text');
@@ -110,7 +108,6 @@ worksInfo.map((elem) => {
       }
     }
   });
-
   for (let i = 0; i < card.length; i++) {
     const para = document.createElement('p');
     const cardArr = card[i];
@@ -144,6 +141,7 @@ worksInfo.map((elem) => {
           btn.className = item;
         }
       });
+
     });
     cardArr.appendChild(btn);
   }
