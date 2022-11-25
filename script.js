@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-cond-assign */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-constant-condition */
@@ -28,802 +29,333 @@ function closeMenu() {
   menuOpen = false;
 }
 
-const intro = [
+const worksInfo = [
   {
-    cls: "intro-text",
-    h1: "Hey There",
-    h1h: "I'm Evans",
-    h2: "I'm a software Developer",
-    para: "I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.",
-    cls1: "socials",
-    icns: [
-      "fa-brands fa-github",
-      "fa-brands fa-linkedin-in",
-      "fa-brands fa-twitter",
-      "fa-solid fa-m",
+    classes: [
+      "plchdr",
+      "img",
+      "text",
+      "card cd1",
+      "card cd2",
+      "card cd3",
+      "card cd4",
+      "card cd5",
+      "card cd6",
+      "seeDemo",
+      "seeDemo2",
     ],
-  },
-];
-
-const section = ["intro", "portfolio", "about"];
-
-const footer = ["contact", "copyright"];
-
-const title = [
-  {
-    cls: "title",
-    h2: "My Recent Works",
-  },
-];
-
-const plchdr = [
-  {
-    cls: "plchdr",
-    cls1: "img",
-    src: "../images/plc-img.jpg",
-    alt: "A woman doing yoga",
-    cls2: "text",
-    h2: "Multi-Post-Stories",
-    para: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.",
-    list: ["css", "html", "bootstrap", "ruby"],
+    heading: ["Professional Art Printing Data", "Multi-Post-Stories"],
+    plchdrImage: "../images/plc-img.jpg",
+    alt: "a woman doing yoga",
+    description:
+      "A daily selection of privately personalized reads, no accounts or sign-ups required. has been the industry's standard",
+    technologies: ["html", "css", "Javascript"],
     btn: "See Project",
-
-    cls3: "cProject",
+    demoLink: "https://prg-04.github.io/Portfolio/",
+    srcLink: "https://github.com/prg-04/Portfolio/",
   },
 ];
 
-const cards = [
+const popUpInfo = [
   {
-    cls: "card cd1",
-    cls1: "card cd2",
-    cls2: "card cd3",
-    cls3: "card cd4",
-    cls4: "card cd5",
-    cls5: "card cd6",
-
-    h3: "Professional Art Printing Data",
-    para: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    list: ["css", "html", "bootstrap"],
-    btn: "See Project",
-  },
-];
-
-const about = [
-  {
-    cls: "about",
-    h2: "About me",
-    para: "Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.",
-    btn: "Get My Resume",
-    cls1: "skillset",
-    cls2: ["specifics one", "specifics two", "specifics three"],
-    entity: "\u2666",
-    entity1: "\u25a0",
-    entity2: "\u25cf",
-    h3: "Languages",
-    h31: "Frameworks",
-    h32: "Skills",
-    list: ["Javascript", "Ruby", "HTML", "CSS"],
-    list1: ["Bootstrap", "Ruby on Rails", "RSpec", "CapyBara", "Salenium"],
-    list2: ["Codekit", "Github", "Codepen", "Gitlab", "Terminal"],
-  },
-];
-
-const form = [
-  {
-    cls: "contact-text",
-    para: "I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.",
-    cls2: "form",
-    action: "https://formspree.io/f/xpznwejk",
-    method: "post",
-    cls3: "names",
-    cls4: "input-grp firstN",
-    type: "text",
-    id: "firstName",
-    name: "firstName",
-    plchdr: "First Name",
-    cls5: "input-grp lastN",
-    id1: "lastName",
-    name1: "lastName",
-    plchdr1: "Last name",
-    cls6: "input-grp",
-    type1: "email",
-    id2: "email",
-    name2: "email",
-    plchdr2: "Email address",
-    name3: "msg",
-    id3: "msg",
-    cols: 30,
-    rows: 10,
-    minL: 30,
-    plchdr3: "Enter text here",
-    btn: "Get in touch",
-    type2: "submit",
-    id4: "fullName",
-    name4: "fullName",
-    plchdr4: "Full name",
-    plchdr5: "name@gmail.com",
-    cls7: "form2",
-  },
-];
-
-const copyright = [
-  {
-    icns: [
+    classes: [
+      "popup",
+      "hdg",
+      "hdr",
+      "heading1",
+      "heading2",
+      "popInfo",
+      "popImg",
+      "popText",
+      "btns",
+      "fa-solid fa-x",
       "fa-brands fa-github",
-      "fa-brands fa-linkedin-in",
-      "fa-brands fa-twitter",
-      "fa-solid fa-m",
     ],
+    heading: [
+      "Multi Post Stories",
+      "Keeping track of hundreds of components website",
+    ],
+    technologies: ["html", "css", "Javascript"],
+    image: "./images/popDesktop.png",
+    alt: ["ten", "icon"],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    btns: ["See live", "See source"],
+    image2: "./images/Icon.png",
   },
 ];
 
-const popUp = [
-  {
-    cls: "popup pWindow",
-    cls1: "hd",
-    cls2: "hdg1",
-    cls3: "hdg2",
-    hd1: "Keeping track of hundreds of components website",
-    hd2: "Multi Post Stories",
-    icn: "fa-solid fa-x",
-    list: ["html", "bootstrap", "Ruby on Rails"],
-    cls4: "pop-img",
-    cls5: "img1",
-    cls6: "img2",
-    img: "../images/popDesktop.png",
-    img1: "../images/popMobile.png",
-    alt: "image 10",
-    cls7: "pop-text",
-    para: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.",
-    cls8: "btns",
-    btn: "See live",
-    btn2: "See Project",
-    img2: "../images/Icon.png",
-    alt1: "icon",
-    icn1: "fa-brands fa-github",
-    cls9: "hdr",
-  },
-];
+const portfolio = document.getElementById("portfolio");
 
-// intro
+worksInfo.map((elem) =>
+  // eslint-disable-next-line implicit-arrow-linebreak
+  elem.classes.map((e) => {
+    const div = document.createElement("div");
+    div.className = e;
+    return portfolio.appendChild(div);
+  }));
 
-const introData = intro.map((item) => {
-  const div = document.createElement("div");
-  div.className = item.cls;
-
-  const h1 = document.createElement("h1");
-  h1.textContent = item.h1;
-  const br = document.createElement("br");
-  h1.appendChild(br);
-  h1.innerHTML += item.h1h;
-  div.appendChild(h1);
-  const para = document.createElement("p");
-  para.innerHTML = item.para;
-  div.appendChild(para);
-  return div;
-});
-
-// socials
-const socials = intro.map((item) => {
-  const div = document.createElement("div");
-  const ul = document.createElement("ul");
-  div.className = item.cls1;
-
-  item.icns.map((icn) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    const icon = document.createElement("i");
-    icon.className = icn;
-    aTag.appendChild(icon);
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div.appendChild(ul);
+const plchdr = document.querySelector(".plchdr");
+const img = document.querySelector(".img");
+const text = document.querySelector(".text");
+const image = document.createElement("img");
+const card = document.querySelectorAll(".card");
+const blur = document.querySelector("#portfolio");
+const seeProject = document.querySelector(".seeDemo");
+const closePopUp = document.querySelector(".fa-x");
+const openPopUp = document.querySelector(".popup");
+const h2 = document.createElement("h2");
+const para = document.createElement("p");
+const ul = document.createElement("ul");
+const btn = document.createElement("button");
+worksInfo.map((elem) => {
+  elem.heading.map((e) => {
+    if (e === "Professional Art Printing Data") {
+      for (let i = 0; i < card.length; i++) {
+        const cardArr = card[i];
+        const h3 = document.createElement("h3");
+        h3.innerHTML = e;
+        cardArr.appendChild(h3);
+      }
+    }
   });
-  return div;
+
+  for (let i = 0; i < card.length; i++) {
+    const para = document.createElement("p");
+    const cardArr = card[i];
+    para.innerHTML = elem.description;
+    cardArr.appendChild(para);
+  }
+  for (let i = 0; i < card.length; i++) {
+    const ul = document.createElement("ul");
+    const cardArr = card[i];
+    elem.technologies.map((tech) => {
+      const li = document.createElement("li");
+      const aTag = document.createElement("a");
+      aTag.innerHTML = tech;
+      li.appendChild(aTag);
+      ul.appendChild(li);
+      return cardArr.appendChild(ul);
+    });
+  }
+  for (let i = 0; i < card.length; i++) {
+    const btn = document.createElement("button");
+    const cardArr = card[i];
+    btn.innerHTML = elem.btn;
+    worksInfo.map((e) => {
+      e.classes.map((item) => {
+        if (item === "seeDemo2") {
+          const seeDemo = btn;
+          seeDemo.addEventListener("click", () => {
+            blur.classList.add("active");
+            openPopUp.classList.add("active");
+          });
+          btn.className = item;
+        }
+      });
+    });
+    cardArr.appendChild(btn);
+  }
 });
-
-// title
-
-const tlsData = title.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const h2 = document.createElement("h2");
-  h2.innerHTML = elem.h2;
-  div.appendChild(h2);
-  const hr = document.createElement("hr");
-  div.append(hr);
-  return div;
-});
-
-// placeholder
-const plchdrData = plchdr.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const div1 = document.createElement("div");
-  div1.className = elem.cls1;
-  const img = document.createElement("img");
-  img.src = elem.src;
+worksInfo.map((elem) => {
+  image.src = elem.plchdrImage;
   img.alt = elem.alt;
-  div1.appendChild(img);
-  div.appendChild(div1);
-  const div2 = document.createElement("div");
-  div2.className = elem.cls2;
-  const h2 = document.createElement("h2");
-  h2.innerHTML = elem.h2;
-  div2.appendChild(h2);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div2.appendChild(para);
-  div.appendChild(div2);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    aTag.innerHTML = item;
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div2.appendChild(ul);
-  });
-  const btn = document.createElement("button");
-  btn.className = elem.cls3;
-  btn.innerHTML = elem.btn;
-  div2.appendChild(btn);
-  return div;
+  return img.appendChild(image);
 });
 
-// cards
-const cardData1 = cards.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const h3 = document.createElement("h3");
-  h3.innerHTML = elem.h3;
-  div.appendChild(h3);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
+worksInfo.map((e) => {
+  // eslint-disable-next-line array-callback-return
+  e.heading.map((item) => {
+    if (item === "Multi-Post-Stories") {
+      h2.innerHTML = item;
+    }
+  });
+  e.technologies.map((tech) => {
     const li = document.createElement("li");
     const aTag = document.createElement("a");
-    aTag.innerHTML = item;
+    aTag.innerHTML = tech;
     li.appendChild(aTag);
-    ul.appendChild(li);
-    div.appendChild(ul);
+    return ul.appendChild(li);
   });
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div.appendChild(btn);
-
-  return div;
-});
-const cardData2 = cards.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls1;
-  const h3 = document.createElement("h3");
-  h3.innerHTML = elem.h3;
-  div.appendChild(h3);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    aTag.innerHTML = item;
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div.appendChild(ul);
-  });
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div.appendChild(btn);
-  return div;
-});
-const cardData3 = cards.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls2;
-  const h3 = document.createElement("h3");
-  h3.innerHTML = elem.h3;
-  div.appendChild(h3);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    aTag.innerHTML = item;
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div.appendChild(ul);
-  });
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div.appendChild(btn);
-  return div;
-});
-const cardData4 = cards.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls3;
-  const h3 = document.createElement("h3");
-  h3.innerHTML = elem.h3;
-  div.appendChild(h3);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    aTag.innerHTML = item;
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div.appendChild(ul);
-  });
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div.appendChild(btn);
-  return div;
-});
-const cardData5 = cards.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls4;
-  const h3 = document.createElement("h3");
-  h3.innerHTML = elem.h3;
-  div.appendChild(h3);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    aTag.innerHTML = item;
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div.appendChild(ul);
-  });
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div.appendChild(btn);
-  return div;
-});
-
-const cardData6 = cards.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls5;
-  const h3 = document.createElement("h3");
-  h3.innerHTML = elem.h3;
-  div.appendChild(h3);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    aTag.innerHTML = item;
-    li.appendChild(aTag);
-    ul.appendChild(li);
-    div.appendChild(ul);
-  });
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div.appendChild(btn);
-  return div;
-});
-
-// about
-
-const abtData = about.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const h2 = document.createElement("h2");
-  h2.innerHTML = elem.h2;
-  div.appendChild(h2);
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  div.appendChild(btn);
-  return div;
-});
-
-// skillset
-const sklSet = about.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls1;
-  elem.cls2.map((e) => {
-    const div1 = document.createElement("div");
-    div1.className = e;
-    if (div1.className === "specifics one") {
-      const h3 = document.createElement("h3");
-      const span = document.createElement("span");
-      span.innerHTML = elem.entity;
-      h3.appendChild(span);
-      h3.innerHTML += elem.h3;
-      div1.appendChild(h3);
-      const ul = document.createElement("ul");
-      elem.list.map((item) => {
-        const li = document.createElement("li");
-        li.innerHTML = item;
-        ul.appendChild(li);
-        div1.appendChild(ul);
+  e.classes.map((item) => {
+    if (item === "seeDemo") {
+      const seeDemo2 = btn;
+      seeDemo2.addEventListener('click', () => {
+        blur.classList.add("active");
+        openPopUp.classList.add("active");
       });
-    } else if (div1.className === "specifics two") {
-      const h3 = document.createElement("h3");
-      const span = document.createElement("span");
-      span.innerHTML = elem.entity1;
-      h3.appendChild(span);
-      h3.innerHTML += elem.h3;
-      div1.appendChild(h3);
-      const ul = document.createElement("ul");
-      elem.list1.map((item) => {
-        const li = document.createElement("li");
-        li.innerHTML = item;
-        ul.appendChild(li);
-        div1.appendChild(ul);
-      });
-    } else if (div1.className === "specifics three") {
-      const h3 = document.createElement("h3");
-      const span = document.createElement("span");
-      span.innerHTML = elem.entity2;
-      h3.appendChild(span);
-      h3.innerHTML += elem.h3;
-      div1.appendChild(h3);
-      const ul = document.createElement("ul");
-      elem.list2.map((item) => {
-        const li = document.createElement("li");
-        li.innerHTML = item;
-        ul.appendChild(li);
-        div1.appendChild(ul);
+      btn.className = item;
+    }
+  });
+  btn.innerHTML = e.btn;
+  para.innerHTML = e.description;
+  return (
+    text.appendChild(h2),
+    text.appendChild(para),
+    text.appendChild(ul),
+    text.appendChild(btn)
+  );
+});
+
+plchdr.appendChild(img);
+plchdr.appendChild(text);
+const popup = document.querySelector(".popup");
+
+function createDiv(arr) {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    // eslint-disable-next-line no-nested-ternary
+    arr[i] === "hdg"
+      ? newArr.push(arr[i])
+      : arr[i] === "popInfo"
+        ? newArr.push(arr[i])
+        : "";
+  }
+  return newArr.map((item) => {
+    const div = document.createElement("div");
+    div.className = item;
+    if (div.className === "hdg") {
+      const hdg = div;
+      popUpInfo.map((elem) => {
+        elem.classes.map((item) => {
+          if (item === "hdr") {
+            const div = document.createElement("div");
+            const hdr = div;
+            div.className = item;
+            popUpInfo.map((item) => {
+              item.heading.map((e) => {
+                if (e === "Multi Post Stories") {
+                  const h2 = document.createElement("h2");
+                  h2.innerHTML = e;
+                  popUpInfo.map((elem) => {
+                    elem.classes.map((item) => {
+                      if (item === "heading1") {
+                        h2.className = item;
+                        hdr.appendChild(h2);
+                        hdg.appendChild(hdr);
+                      }
+                    });
+                  });
+                }
+                if (e === "Keeping track of hundreds of components website") {
+                  const h2 = document.createElement("h2");
+                  h2.innerHTML = e;
+                  popUpInfo.map((elem) => {
+                    elem.classes.map((item) => {
+                      if (item === "heading2") {
+                        h2.className = item;
+                        hdr.appendChild(h2);
+                        hdg.appendChild(hdr);
+                      }
+                    });
+                  });
+                }
+              });
+              item.classes.map((e) => {
+                if (e === "fa-solid fa-x") {
+                  const span = document.createElement("span");
+                  const icn = document.createElement("i");
+                  const popIcon = icn;
+                  popIcon.addEventListener("click", () => {
+                    blur.classList.remove("active");
+                    openPopUp.classList.remove("active");
+                  });
+                  icn.className = e;
+                  span.appendChild(icn);
+                  hdr.appendChild(span);
+                }
+              });
+              const ul = document.createElement("ul");
+              item.technologies.map((e) => {
+                const li = document.createElement("li");
+                li.innerHTML = e;
+                ul.appendChild(li);
+                hdg.appendChild(ul);
+              });
+            });
+          }
+        });
       });
     }
+    if (div.className === "popInfo") {
+      const popInfo = div;
+      popUpInfo.map((elem) => {
+        elem.classes.map((e) => {
+          if (e === "popImg") {
+            const div = document.createElement("div");
+            const popImgDiv = div;
+            div.className = e;
+            const popImg = document.createElement("img");
+            popImg.src = elem.image;
+            popImg.alt = elem.alt;
+            popImgDiv.appendChild(popImg);
+            popInfo.appendChild(popImgDiv);
+          }
+        });
+        elem.classes.map((e) => {
+          if (e === "popText") {
+            const div = document.createElement("div");
+            div.className = e;
+            const popText = div;
+            const para = document.createElement("p");
+            para.innerHTML = elem.description;
+            popText.appendChild(para);
+            popUpInfo.map((elem) => {
+              elem.classes.map((item) => {
+                if (item === "btns") {
+                  const div = document.createElement("div");
+                  const btns = div;
+                  div.className = item;
+                  elem.btns.map((item) => {
+                    const btn1 = document.createElement("button");
+                    const btn2 = document.createElement("button");
+                    if (item === "See live") {
+                      btn1.innerHTML = item;
+                      const span1 = document.createElement("span");
+                      const image = document.createElement("img");
+                      image.src = elem.image2;
+                      image.alt = elem.alt;
+                      span1.appendChild(image);
+                      btn1.appendChild(span1);
+                      btns.appendChild(btn1);
+                      popText.appendChild(btns);
+                      btn1.appendChild(span1);
+                      btns.appendChild(btn1);
+                    }
+                    if (item === "See source") {
+                      btn2.innerHTML = item;
+                      popUpInfo.map((elem) => {
+                        elem.classes.map((e) => {
+                          if (e === "fa-brands fa-github") {
+                            const span = document.createElement("span");
+                            const icn = document.createElement("i");
+                            icn.className = e;
+                            span.appendChild(icn);
+                            btn2.appendChild(span);
+                          }
+                        });
+                      });
 
-    div.appendChild(div1);
+                      btns.appendChild(btn2);
+
+                      popText.appendChild(btns);
+                    }
+                  });
+                }
+              });
+            });
+
+            popInfo.appendChild(popText);
+          }
+        });
+      });
+    }
+    popup.appendChild(div);
   });
+}
+const popupWindow = createDiv(popUpInfo[0].classes);
 
-  return div;
-});
-
-// popUp
-
-const popData = popUp.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const div1 = document.createElement("div");
-  div1.className = elem.cls1;
-  const div2 = document.createElement("div");
-  div2.className = elem.cls9;
-  const h2 = document.createElement("h2");
-  h2.className = elem.cls2;
-  h2.innerHTML = elem.hd1;
-  div2.appendChild(h2);
-  const h21 = document.createElement("h2");
-  h21.className = elem.cls3;
-  h21.innerHTML = elem.hd2;
-  div2.appendChild(h21);
-  const span = document.createElement("span");
-  const icn = document.createElement("i");
-  icn.className = elem.icn;
-  span.appendChild(icn);
-  div2.appendChild(span);
-  div1.appendChild(div2);
-  div.appendChild(div1);
-
-  const ul = document.createElement("ul");
-  elem.list.map((item) => {
-    const li = document.createElement("li");
-    li.innerHTML = item;
-    ul.appendChild(li);
-    div1.appendChild(ul);
-  });
-
-  const div3 = document.createElement("div");
-  div3.className = elem.cls4;
-  const img = document.createElement("img");
-  img.className = elem.cls5;
-  img.src = elem.img;
-  img.alt = elem.alt;
-  div3.appendChild(img);
-  const img1 = document.createElement("img");
-  img1.className = elem.cls6;
-  img1.src = elem.img1;
-  img1.alt = elem.alt;
-  div3.appendChild(img1);
-  div.appendChild(div3);
-
-  const div4 = document.createElement("div");
-  div4.className = elem.cls7;
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div4.appendChild(para);
-
-  // btns
-  const div5 = document.createElement("div");
-  div5.className = elem.cls8;
-  const btn = document.createElement("button");
-  btn.innerHTML = elem.btn;
-  const spanImg = document.createElement("span");
-  const img2 = document.createElement("img");
-  img2.src = elem.img2;
-  img2.alt = elem.alt1;
-  spanImg.appendChild(img2);
-  btn.appendChild(spanImg);
-  div5.appendChild(btn);
-  div4.appendChild(div5);
-
-  const btn2 = document.createElement("button");
-  btn2.innerHTML = elem.btn2;
-  const spanIcon = document.createElement("span");
-  const icon = document.createElement("i");
-  icon.className = elem.icn1;
-  spanIcon.appendChild(icon);
-  btn2.appendChild(spanIcon);
-  div5.appendChild(btn2);
-  div.appendChild(div4);
-  return div;
-});
-
-// section
-const secData = section.map((elem) => {
-  const section = document.createElement("section");
-  section.id = elem;
-  if (section.id === "intro") {
-    introData.map((e) => {
-      section.appendChild(e);
-    });
-    socials.map((e) => {
-      section.append(e);
-    });
-  } else if (section.id === "portfolio") {
-    tlsData.map((e) => {
-      section.appendChild(e);
-    });
-    plchdrData.map((e) => {
-      section.appendChild(e);
-    });
-    popData.map((e) => {
-      section.appendChild(e);
-    });
-    cardData1.map((e) => {
-      section.appendChild(e);
-    });
-    cardData2.map((e) => {
-      section.appendChild(e);
-    });
-    cardData3.map((e) => {
-      section.appendChild(e);
-    });
-    cardData4.map((e) => {
-      section.appendChild(e);
-    });
-    cardData5.map((e) => {
-      section.appendChild(e);
-    });
-    cardData6.map((e) => {
-      section.appendChild(e);
-    });
-  } else {
-    abtData.map((e) => {
-      section.appendChild(e);
-    });
-    const hr = document.createElement("hr");
-    section.appendChild(hr);
-    sklSet.map((e) => {
-      section.appendChild(e);
-    });
-  }
-
-  document.body.appendChild(section);
-});
-
-const contactData = form.map((elem) => {
-  const div = document.createElement("div");
-  div.className = elem.cls;
-  const para = document.createElement("p");
-  para.innerHTML = elem.para;
-  div.appendChild(para);
-  return div;
-});
-
-const formData = form.map((elem) => {
-  const form = document.createElement("form");
-  form.action = elem.action;
-  form.method = elem.method;
-  form.className = elem.cls2;
-  const fieldset = document.createElement("fieldset");
-  const div = document.createElement("div");
-  div.className = elem.cls3;
-  // first name
-  const div1 = document.createElement("div");
-  div1.className = elem.cls4;
-  const label = document.createElement("label");
-  const input = document.createElement("input");
-  input.type = elem.type;
-  input.id = elem.id;
-  input.name = elem.name;
-  input.placeholder = elem.plchdr;
-  input.setAttribute = "required";
-  label.appendChild(input);
-  div1.appendChild(label);
-  div.appendChild(div1);
-  fieldset.appendChild(div);
-  form.appendChild(fieldset);
-
-  // last name
-  const div2 = document.createElement("div");
-  div2.className = elem.cls5;
-  const label2 = document.createElement("label");
-  const input2 = document.createElement("input");
-  input2.type = elem.type;
-  input2.id = elem.id1;
-  input2.name = elem.name1;
-  input2.placeholder = elem.plchdr1;
-  input2.setAttribute = "required";
-  label2.appendChild(input2);
-  div2.appendChild(label2);
-  div.appendChild(div2);
-  fieldset.appendChild(div);
-  form.appendChild(fieldset);
-
-  // email
-
-  const div3 = document.createElement("div");
-  div3.className = elem.cls6;
-  const label3 = document.createElement("label");
-  const input3 = document.createElement("input");
-  input3.type = elem.type1;
-  input3.id = elem.id2;
-  input3.name = elem.name2;
-  input3.placeholder = elem.plchdr2;
-  input3.setAttribute = "required";
-  label3.appendChild(input3);
-  div3.appendChild(label3);
-  fieldset.appendChild(div3);
-  form.appendChild(fieldset);
-
-  // textarea
-  const div4 = document.createElement("div");
-  div4.className = elem.cls6;
-  const label4 = document.createElement("label");
-  const textarea = document.createElement("textarea");
-  textarea.id = elem.id3;
-  textarea.name = elem.name3;
-  textarea.cols = elem.cols;
-  textarea.rows = elem.rows;
-  textarea.minLength = elem.minL;
-  textarea.placeholder = elem.plchdr3;
-  textarea.setAttribute = "required";
-  label4.appendChild(textarea);
-  div4.appendChild(label4);
-  fieldset.appendChild(div4);
-  form.appendChild(fieldset);
-
-  // btn
-
-  const btn = document.createElement("button");
-  btn.type = elem.type2;
-  btn.innerHTML = elem.btn;
-  fieldset.appendChild(btn);
-  return form;
-});
-
-// form2
-
-const formData2 = form.map((elem) => {
-  const form2 = document.createElement("form");
-  form2.action = elem.action;
-  form2.method = elem.method;
-  form2.className = elem.cls7;
-  const fieldset = document.createElement("fieldset");
-
-  // full name
-  const div1 = document.createElement("div");
-  div1.className = elem.cls6;
-  const label = document.createElement("label");
-  const input = document.createElement("input");
-  input.type = elem.type;
-  input.id = elem.id4;
-  input.name = elem.name4;
-  input.placeholder = elem.plchdr4;
-  input.setAttribute = "required";
-  label.appendChild(input);
-  div1.appendChild(label);
-  fieldset.appendChild(div1);
-  form2.appendChild(fieldset);
-
-  // email
-
-  const div3 = document.createElement("div");
-  div3.className = elem.cls6;
-  const label3 = document.createElement("label");
-  const input3 = document.createElement("input");
-  input3.type = elem.type1;
-  input3.id = elem.id2;
-  input3.name = elem.name2;
-  input3.placeholder = elem.plchdr5;
-  input3.setAttribute = "required";
-  label3.appendChild(input3);
-  div3.appendChild(label3);
-  fieldset.appendChild(div3);
-  form2.appendChild(fieldset);
-
-  // textarea
-  const div4 = document.createElement("div");
-  div4.className = elem.cls6;
-  const label4 = document.createElement("label");
-  const textarea = document.createElement("textarea");
-  textarea.id = elem.id3;
-  textarea.name = elem.name3;
-  textarea.cols = elem.cols;
-  textarea.rows = elem.rows;
-  textarea.minLength = elem.minL;
-  textarea.placeholder = elem.plchdr3;
-  textarea.setAttribute = "required";
-  label4.appendChild(textarea);
-  div4.appendChild(label4);
-  fieldset.appendChild(div4);
-  form2.appendChild(fieldset);
-
-  // btn
-
-  const btn = document.createElement("button");
-  btn.type = elem.type2;
-  btn.innerHTML = elem.btn;
-  fieldset.appendChild(btn);
-  return form2;
-});
-
-// copyright
-
-const copyrightData = copyright.map((item) => {
-  const ul = document.createElement("ul");
-  item.icns.map((icn) => {
-    const li = document.createElement("li");
-    const aTag = document.createElement("a");
-    const icon = document.createElement("i");
-    icon.className = icn;
-    aTag.appendChild(icon);
-    li.appendChild(aTag);
-    ul.appendChild(li);
-  });
-  return ul;
-});
-
-// footer
-const footerData = footer.map((elem) => {
-  const footer = document.createElement("footer");
-  footer.id = elem;
-  if (footer.id === "contact") {
-    contactData.map((item) => {
-      footer.appendChild(item);
-    });
-    formData.map((item) => {
-      footer.appendChild(item);
-    });
-    formData2.map((item) => {
-      footer.appendChild(item);
-    });
-  } else if (footer.id === "copyright") {
-    copyrightData.map((elem) => {
-      footer.appendChild(elem);
-    });
-  }
-  document.body.appendChild(footer);
-});
-
-const pWindow = document.querySelector(".pWindow");
-
-const seeProject = document.querySelector(".cProject");
-
-seeProject.addEventListener("click", () => {
-  pWindow.classList.add("open");
-});
-
-const closePopUp = document.querySelector(".fa-x");
-
-closePopUp.addEventListener("click", () => {
-  pWindow.classList.remove("open");
-});
+// seeProject.addEventListener("click", () => {
+//   blur.classList.add("active");
+//   openPopUp.classList.add("active");
+// });
