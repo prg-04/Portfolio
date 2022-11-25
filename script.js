@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable array-callback-return */
 const toggleMenu = document.querySelector('.toggle');
 const navlinks = document.querySelector('.navlinks');
 let menuOpen = false;
@@ -14,6 +16,7 @@ toggleMenu.addEventListener('click', () => {
   navlinks.classList.toggle('open');
 });
 
+// eslint-disable-next-line no-unused-vars
 function closeMenu() {
   toggleMenu.classList.remove('open');
   navlinks.classList.remove('open');
@@ -46,7 +49,6 @@ const worksInfo = [
     srcLink: 'https://github.com/prg-04/Portfolio/',
   },
 ];
-
 const popUpInfo = [
   {
     classes: [
@@ -85,15 +87,12 @@ worksInfo.map((elem) =>
     div.className = e;
     return portfolio.appendChild(div);
   }));
-
 const plchdr = document.querySelector('.plchdr');
 const img = document.querySelector('.img');
 const text = document.querySelector('.text');
 const image = document.createElement('img');
 const card = document.querySelectorAll('.card');
 const blur = document.querySelector('#portfolio');
-const seeProject = document.querySelector('.seeDemo');
-const closePopUp = document.querySelector('.fa-x');
 const openPopUp = document.querySelector('.popup');
 const h2 = document.createElement('h2');
 const para = document.createElement('p');
@@ -102,7 +101,7 @@ const btn = document.createElement('button');
 worksInfo.map((elem) => {
   elem.heading.map((e) => {
     if (e === 'Professional Art Printing Data') {
-      for (let i = 0; i < card.length; i++) {
+      for (let i = 0; i < card.length; i += 1) {
         const cardArr = card[i];
         const h3 = document.createElement('h3');
         h3.innerHTML = e;
@@ -110,14 +109,13 @@ worksInfo.map((elem) => {
       }
     }
   });
-
-  for (let i = 0; i < card.length; i++) {
+  for (let i = 0; i < card.length; i += 1) {
     const para = document.createElement('p');
     const cardArr = card[i];
     para.innerHTML = elem.description;
     cardArr.appendChild(para);
   }
-  for (let i = 0; i < card.length; i++) {
+  for (let i = 0; i < card.length; i += 1) {
     const ul = document.createElement('ul');
     const cardArr = card[i];
     elem.technologies.map((tech) => {
@@ -129,7 +127,7 @@ worksInfo.map((elem) => {
       return cardArr.appendChild(ul);
     });
   }
-  for (let i = 0; i < card.length; i++) {
+  for (let i = 0; i < card.length; i += 1) {
     const btn = document.createElement('button');
     const cardArr = card[i];
     btn.innerHTML = elem.btn;
@@ -144,8 +142,8 @@ worksInfo.map((elem) => {
           btn.className = item;
         }
       });
+      return cardArr.appendChild(btn);
     });
-    cardArr.appendChild(btn);
   }
 });
 worksInfo.map((elem) => {
@@ -155,7 +153,6 @@ worksInfo.map((elem) => {
 });
 
 worksInfo.map((e) => {
-  // eslint-disable-next-line array-callback-return
   e.heading.map((item) => {
     if (item === 'Multi-Post-Stories') {
       h2.innerHTML = item;
@@ -194,8 +191,8 @@ const popup = document.querySelector('.popup');
 
 function createDiv(arr) {
   const newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    // eslint-disable-next-line no-nested-ternary
+  for (let i = 0; i < arr.length; i += 1) {
+    // eslint-disable-next-line no-nested-ternary, no-unused-expressions
     arr[i] === 'hdg'
       ? newArr.push(arr[i])
       : arr[i] === 'popInfo'
@@ -283,6 +280,7 @@ function createDiv(arr) {
             popInfo.appendChild(popImgDiv);
           }
         });
+
         elem.classes.map((e) => {
           if (e === 'popText') {
             const div = document.createElement('div');
@@ -344,6 +342,7 @@ function createDiv(arr) {
     popup.appendChild(div);
   });
 }
+// eslint-disable-next-line no-unused-vars
 const popupWindow = createDiv(popUpInfo[0].classes);
 
 const fstNerr = document.querySelector('.firstNerror');
@@ -356,7 +355,7 @@ const submitErr = document.querySelector('.submitError');
 function validateFirstName() {
   const fstname = document.getElementById('firstName').value;
 
-  if (fstname.length == 0) {
+  if (fstname.length === 0) {
     fstNerr.innerHTML = 'First name is required';
     return false;
   }
@@ -366,7 +365,7 @@ function validateFirstName() {
 function validateLastName() {
   const lstname = document.getElementById('lastName').value;
 
-  if (lstname.length == 0) {
+  if (lstname.length === 0) {
     lNerr.innerHTML = 'Last name is required';
     return false;
   }
@@ -376,7 +375,7 @@ function validateLastName() {
 function validateFullName() {
   const fullName = document.getElementById('fullName').value;
 
-  if (fullName.length == 0) {
+  if (fullName.length === 0) {
     flNerr.innerHTML = 'Full name is required';
     return false;
   }
@@ -391,10 +390,11 @@ function validateFullName() {
 function validateEmail() {
   const email = document.getElementById('email').value;
 
-  if (email.length == 0) {
+  if (email.length === 0) {
     emailErr.innerHTML = 'Email is required';
     return false;
-  } if (
+  }
+  if (
     !email.match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     )
