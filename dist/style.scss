@@ -15,7 +15,7 @@ $font-weights: (
   "regular": 400,
   "medium": 500,
   "semibold": 600,
-  "bold": 700,
+  "bold": 700
 );
 
 // ------colors------
@@ -497,73 +497,130 @@ $blue: #344563;
 
 #contact {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-}
-
-.contact-text {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 327px;
-  height: 216px;
-  margin: 6rem 1rem 3rem 2rem;
-  p {
-    font-family: $inter;
-    font-style: normal;
-    font-weight: weight(bold);
-    font-size: 32px;
-    line-height: 44px;
-    color: $base-navy;
-  }
-}
+  flex-direction: column;
 
-.form {
-  display: none;
-}
-
-.form2 {
-  margin-top: 1rem;
-  fieldset {
-    width: 328px;
-    height: 400px;
-    border: none;
-    input {
-      margin-bottom: 1rem;
-    }
-
-    input,
-    textarea {
-      padding: 10px;
-      margin-left: 1rem;
-      width: 100%;
-      border: none;
-      border-bottom: 1px solid $gray3;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: none;
-    }
-
-    textarea {
-      background-color: #e7e5e5;
-    }
-
-    button {
-      width: 122px;
-      height: 48px;
-      background-color: $primary;
-      color: $base-white;
-      border: none;
-      font-family: $roboto;
+  .contact-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 327px;
+    height: 216px;
+    margin-right: 2rem;
+    p {
+      font-family: "Inter";
       font-style: normal;
-      font-weight: weight(bold);
-      font-size: 17px;
-      line-height: 24px;
-      margin-left: 8em;
-      margin-top: 1rem;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      color: #172b4d;
+    }
+  }
+
+  .form {
+    display: none;
+  }
+
+  .form2 {
+    margin-top: 4rem;
+    display: block;
+    fieldset {
+      width: 327px;
+      height: 400px;
+      border: none;
+
+      .fullN {
+        height: 50px;
+        border-bottom: 1px solid #dbd8d7;
+
+        input {
+          width: 50%;
+          height: 45px;
+          border: none;
+        }
+        input:focus {
+          outline: none;
+        }
+      }
+
+      .err {
+        color: red;
+      }
+      .mail {
+        height: 50px;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #dbd8d7;
+
+        input {
+          width: 99%;
+          height: 45px;
+          border: none;
+        }
+        input:focus {
+          outline: none;
+        }
+
+        .emailError2 {
+          position: relative;
+          bottom: 30px;
+          left: 65%;
+        }
+
+        .emailValid2 {
+          position: absolute;
+          top: 130px;
+          left: 37%;
+        }
+      }
+
+      .msg {
+        margin-bottom: 2rem;
+        textarea {
+          width: 99%;
+          border: none;
+          background-color: #fbf8f7;
+        }
+        textarea:focus {
+          outline: none;
+        }
+      }
+
+      .fullNerror {
+        position: relative;
+        left: 8%;
+      }
+
+      .fullNValid {
+        position: absolute;
+        top: 80px;
+        left: 37%;
+      }
+
+      .msgError2 {
+        position: relative;
+        left: 45%;
+      }
+
+      .msgValid2 {
+        position: absolute;
+        top: 320px;
+        left: 37%;
+      }
+
+      button {
+        height: 48px;
+        background-color: #ff5800;
+        color: #fff;
+        border: none;
+        font-family: "roboto", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 24px;
+        margin-left: 8rem;
+      }
     }
   }
 }
@@ -593,6 +650,235 @@ $blue: #344563;
   visibility: hidden;
   position: fixed;
   top: 2%;
+  #contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .form2 {
+      margin-top: 4rem;
+      display: none;
+      fieldset {
+        width: 327px;
+        height: 400px;
+        border: none;
+
+        .fullN {
+          height: 50px;
+          border-bottom: 1px solid #000;
+
+          input {
+            width: 50%;
+            height: 45px;
+            border: none;
+          }
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .err {
+          color: red;
+        }
+        .mail {
+          height: 50px;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #000;
+
+          input {
+            width: 99%;
+            height: 45px;
+            border: none;
+          }
+          input:focus {
+            outline: none;
+          }
+
+          .emailError2 {
+            position: absolute;
+            top: 130px;
+            left: 28%;
+          }
+
+          .emailValid2 {
+            position: absolute;
+            top: 130px;
+            left: 37%;
+          }
+        }
+
+        .msg {
+          margin-bottom: 2rem;
+          textarea {
+            width: 99%;
+            border: none;
+            background-color: #fbf8f7;
+          }
+          textarea:focus {
+            outline: none;
+          }
+        }
+
+        .fullNerror {
+          position: absolute;
+          top: 80px;
+          left: 25%;
+        }
+
+        .fullNValid {
+          position: absolute;
+          top: 80px;
+          left: 37%;
+        }
+
+        .msgError2 {
+          position: absolute;
+          top: 320px;
+          left: 20%;
+        }
+
+        .msgValid2 {
+          position: absolute;
+          top: 320px;
+          left: 37%;
+        }
+
+        button {
+          height: 48px;
+          background-color: #ff5800;
+          color: #fff;
+          border: none;
+          font-family: "roboto", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 17px;
+          line-height: 24px;
+          margin-left: 7rem;
+        }
+      }
+    }
+
+    .contact-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 327px;
+      height: 216px;
+      margin-right: 2rem;
+      p {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        color: #172b4d;
+      }
+    }
+
+    .form {
+      display: block;
+      margin-top: 1rem;
+      fieldset {
+        border: none;
+        width: 100%;
+        height: 400px;
+
+        .mail {
+          height: 50px;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #000;
+
+          input {
+            width: 99%;
+            height: 45px;
+            border: none;
+          }
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .msg {
+          textarea {
+            width: 99%;
+            border: none;
+            background-color: #fbf8f7;
+          }
+          textarea:focus {
+            outline: none;
+          }
+        }
+
+        .submitErr {
+          color: red;
+        }
+        .fa-sharp {
+          color: green;
+        }
+
+        .firstNerror {
+          position: absolute;
+          top: 35px;
+          left: 32%;
+        }
+
+        .firstNValid {
+          position: absolute;
+          top: 35px;
+          left: 47%;
+        }
+
+        .lastNerror {
+          position: absolute;
+          top: 35px;
+          left: 80%;
+        }
+
+        .lastNValid {
+          position: absolute;
+          top: 35px;
+          left: 95%;
+        }
+
+        .emailError {
+          position: absolute;
+          left: 83%;
+          top: 95px;
+        }
+
+        .emailValid {
+          position: absolute;
+          top: 97px;
+          left: 94%;
+        }
+
+        .msgError {
+          position: absolute;
+          left: 80%;
+          top: 270px;
+        }
+
+        .err {
+          color: red;
+        }
+
+        button {
+          margin-top: 2rem;
+          height: 48px;
+          background-color: #ff5800;
+          color: #fff;
+          border: none;
+          font-family: "roboto", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 17px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
   background-color: #fff;
   width: 85vw;
   height: 731px;
@@ -807,16 +1093,20 @@ $blue: #344563;
   #contact {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-around;
-    width: 100%;
+    margin-top: 2rem;
+
+    .contact-text {
+      margin-top: 5rem;
+    }
   }
   .form {
     display: none;
   }
 
   .form2 {
-    margin-top: 8rem;
+    margin-top: 0;
     margin-right: 2rem;
     fieldset {
       width: 328px;
@@ -1037,98 +1327,166 @@ $blue: #344563;
     flex-direction: row;
     justify-content: space-around;
   }
+  .names {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    .firstN {
+      width: 45%;
+      height: 50px;
+      border-bottom: 1px solid #dbd8d7;
+    }
+
+    .lastN {
+      width: 45%;
+      height: 50px;
+      border-bottom: 1px solid #dbd8d7;
+    }
+    input {
+      width: 40%;
+      height: 45px;
+      border: none;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
 
   #contact {
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
-    align-items: center;
-    width: 100%;
-  }
+    margin-top: 2rem;
 
-  .contact-text {
-    margin-top: 8rem;
-    margin-left: 3rem;
-    width: 455px;
-    height: 256px;
-    p {
+    .contact-text {
       display: flex;
-      flex-wrap: wrap;
-      font-family: $inter;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 52px;
-      color: #262626;
-    }
-  }
-
-  .form2 {
-    display: none;
-  }
-
-  .form {
-    margin-top: 4rem;
-    display: block;
-    fieldset {
-      width: 684px;
-      height: 330px;
-      border: none;
-      input {
-        margin-bottom: 1rem;
-      }
-
-      input,
-      textarea {
-        width: 85%;
-        padding: 1em;
-        border: none;
-      }
-
-      input {
-        border-bottom: 1px solid $gray3;
-      }
-
-      textarea {
-        background-color: #fbf8f7;
-      }
-
-      input:focus,
-      textarea:focus {
-        outline: none;
-      }
-
-      .names {
-        max-width: 100%;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .firstN {
-        position: relative;
-        width: 40%;
-      }
-
-      .lastN {
-        position: relative;
-        left: -10%;
-        width: 40%;
-      }
-
-      button {
-        height: 48px;
-        background-color: $primary;
-        color: $base-white;
-        border: none;
-        font-family: $roboto;
+      align-items: center;
+      justify-content: center;
+      width: 327px;
+      height: 216px;
+      margin-right: 2rem;
+      margin-top: 0;
+      p {
+        font-family: "Inter";
         font-style: normal;
-        font-weight: weight(bold);
-        font-size: 17px;
-        line-height: 24px;
-        margin-left: 0;
-        margin-top: 1rem;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        color: #172b4d;
+      }
+    }
+
+    .form2 {
+      display: none;
+    }
+
+    .form {
+      display: block;
+      margin-top: 8rem;
+      fieldset {
+        border: none;
+        width: 684px;
+        height: 400px;
+
+        .mail {
+          height: 50px;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #dbd8d7;
+
+          input {
+            width: 99%;
+            height: 45px;
+            border: none;
+          }
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .msg {
+          textarea {
+            width: 99%;
+            border: none;
+            background-color: #fbf8f7;
+          }
+          textarea:focus {
+            outline: none;
+          }
+
+          .msgError {
+            position: relative;
+            left: 73%;
+            bottom: 30px;
+          }
+
+          .msgValid {
+            position: relative;
+            left: 94%;
+            bottom: 30px;
+          }
+        }
+
+        .submitErr {
+          color: red;
+          position: relative;
+          
+        }
+        .fa-sharp {
+          color: green;
+        }
+
+        .firstNerror {
+          position: relative;
+          left: 15%;
+        }
+
+        .firstNValid {
+          position: relative;
+          left: 50%;
+        }
+
+        .lastNerror {
+          position: relative;
+          left: 10%;
+        }
+
+        .lastNValid {
+          position: relative;
+          left: 50%;
+        }
+
+        .emailError {
+          position: relative;
+          bottom: 65%;
+          left: 82%;
+        }
+
+        .emailValid {
+          position: relative;
+          bottom: 70%;
+          left: 96%;
+        }
+
+        .err {
+          color: red;
+        }
+
+        button {
+          margin-top: 1.5rem;
+          height: 48px;
+          background-color: #ff5800;
+          color: #fff;
+          border: none;
+          font-family: "roboto", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 17px;
+          line-height: 24px;
+        }
       }
     }
   }
+
   #copyright {
     border-top: 1px solid #dfe1e6;
     margin-top: 8rem;
