@@ -510,3 +510,34 @@ function formValidate2() {
   submitErr2.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
+const storeData = document.querySelector('.form');
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const fullName = document.getElementById('fullName');
+const email = document.getElementById('email');
+const msg = document.getElementById('msg');
+
+storeData.addEventListener('input', () => {
+  const formData = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    msg: msg.value,
+  };
+  localStorage.setItem('userInfo', JSON.stringify(formData));
+});
+
+window.onload = () => {
+  let savedData = localStorage.getItem("formData");
+
+  savedData = JSON.parse(savedData);
+
+  if (savedData) {
+    const Email2 = document.getElementById("email");
+    const userName2 = document.getElementById("name");
+    const userMsg2 = document.getElementById("msg");
+    Email2.value = savedData.email;
+    userName2.value = savedData.name;
+    userMsg2.value = savedData.message;
+  }
+};
