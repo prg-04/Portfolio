@@ -528,14 +528,14 @@ storeData.addEventListener('input', () => {
 });
 
 window.onload = () => {
-  let savedData = localStorage.getItem("formData");
+  let savedData = localStorage.getItem('formData');
 
   savedData = JSON.parse(savedData);
 
   if (savedData) {
-    const Email2 = document.getElementById("email");
-    const userName2 = document.getElementById("name");
-    const userMsg2 = document.getElementById("msg");
+    const Email2 = document.getElementById('email');
+    const userName2 = document.getElementById('name');
+    const userMsg2 = document.getElementById('msg');
     Email2.value = savedData.email;
     userName2.value = savedData.name;
     userMsg2.value = savedData.message;
