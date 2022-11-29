@@ -355,22 +355,35 @@ function createDiv(arr) {
 }
 // eslint-disable-next-line no-unused-vars
 const popupWindow = createDiv(popUpInfo[0].classes);
-
 const fstNerr = document.querySelector('.firstNerror');
+const fstValid = document.querySelector('.firstNValid');
 const lNerr = document.querySelector('.lastNerror');
+const lastNValid = document.querySelector('.lastNValid');
 const flNerr = document.querySelector('.fullNerror');
+const fullNValid = document.querySelector('.fullNValid');
 const emailErr = document.querySelector('.emailError');
+const emailValid = document.querySelector('.emailValid');
+const emailErr2 = document.querySelector('.emailError2');
+const emailValid2 = document.querySelector('.emailValid2');
 const msgErr = document.querySelector('.msgError');
+const msgValid = document.querySelector('.msgValid');
+const msgErr2 = document.querySelector('.msgError2');
+const msgValid2 = document.querySelector('.msgValid2');
 const submitErr = document.querySelector('.submitError');
+const submitErr2 = document.querySelector('.submitError2');
+
+const formValid = document.querySelector('.formValid');
 
 function validateFirstName() {
   const fstname = document.getElementById('firstName').value;
 
   if (fstname.length === 0) {
     fstNerr.innerHTML = 'First name is required';
+    fstValid.innerHTML = null;
     return false;
   }
-  fstNerr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  fstNerr.innerHTML = null;
+  fstValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
 function validateLastName() {
@@ -378,9 +391,11 @@ function validateLastName() {
 
   if (lstname.length === 0) {
     lNerr.innerHTML = 'Last name is required';
+    lastNValid.innerHTML = null;
     return false;
   }
-  lNerr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  lNerr.innerHTML = null;
+  lastNValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
 function validateFullName() {
@@ -388,13 +403,15 @@ function validateFullName() {
 
   if (fullName.length === 0) {
     flNerr.innerHTML = 'Full name is required';
+    fullNValid.innerHTML = null;
     return false;
   }
   if (!fullName.match(/^[A-Za-z]*\s{1}[A-Za-z]*&/)) {
     flNerr.innerHTML = 'Enter second name';
   }
 
-  flNerr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  flNerr.innerHTML = null;
+  fullNValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
 
@@ -403,6 +420,7 @@ function validateEmail() {
 
   if (email.length === 0) {
     emailErr.innerHTML = 'Email is required';
+    emailValid.innerHTML = null;
     return false;
   }
   if (
@@ -411,9 +429,33 @@ function validateEmail() {
     )
   ) {
     emailErr.innerHTML = 'Email Invalid';
+    emailValid.innerHTML = null;
     return false;
   }
-  emailErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  emailErr.innerHTML = null;
+  emailValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+}
+
+function validateEmail2() {
+  const email2 = document.getElementById('email2').value;
+
+  if (email2.length === 0) {
+    emailErr2.innerHTML = 'Email is required';
+    emailValid2.innerHTML = null;
+    return false;
+  }
+  if (
+    !email2.match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    )
+  ) {
+    emailErr2.innerHTML = 'Email Invalid';
+    emailValid2.innerHTML = null;
+    return false;
+  }
+  emailErr2.innerHTML = null;
+  emailValid2.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
 
@@ -424,16 +466,32 @@ function validateMsg() {
   const charLeft = required - msg.length;
   if (charLeft > 0) {
     msgErr.innerHTML = `${charLeft}more characters required`;
+    msgValid.innerHTML = null;
     return false;
   }
-  msgErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  msgErr.innerHTML = null;
+  msgValid.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+}
+
+function validateMsg2() {
+  const msg2 = document.getElementById('msg2').value;
+  const required = 30;
+
+  const charLeft = required - msg2.length;
+  if (charLeft > 0) {
+    msgErr2.innerHTML = `${charLeft}more characters required`;
+    msgValid2.innerHTML = null;
+    return false;
+  }
+  msgErr2.innerHTML = null;
+  msgValid2.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
 
 function formValidate() {
   if (
-    !validateFullName()
-    || !validateFirstName()
+    !validateFirstName()
     || !validateLastName()
     || !validateEmail()
     || !validateMsg()
@@ -449,3 +507,50 @@ function formValidate() {
   submitErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
+function formValidate2() {
+  if (!validateFullName() || !validateEmail2() || !validateMsg2()) {
+    submitErr2.style.display = 'block';
+    submitErr2.style.color = 'red';
+    submitErr2.innerHTML = 'Please fix error to submit';
+    setTimeout(() => {
+      submitErr2.style.display = 'none';
+    }, 3000);
+    return false;
+  }
+  submitErr2.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+  return true;
+}
+const storeData = document.querySelector('.form');
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const fullName = document.getElementById('fullName');
+const email = document.getElementById('email');
+const msg = document.getElementById('msg');
+
+storeData.addEventListener('input', () => {
+  const formData = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    msg: msg.value,
+  };
+  localStorage.setItem('userInfo', JSON.stringify(formData));
+});
+
+window.onload = () => {
+  let savedData = localStorage.getItem('userInfo');
+
+  savedData = JSON.parse(savedData);
+
+  if (savedData) {
+    const email = document.getElementById('email');
+    const firstName = document.getElementById('firstName');
+    const lastName = document.getElementById('lastName');
+    const msg = document.getElementById('msg');
+
+    email.value = savedData.email;
+    firstName.value = savedData.firstName;
+    lastName.value = savedData.lastName;
+    msg.value = savedData.msg;
+  }
+};

@@ -472,71 +472,117 @@
 
 #contact {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
-
-.contact-text {
+#contact .contact-text {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 327px;
   height: 216px;
-  margin: 6rem 1rem 3rem 2rem;
+  margin-right: 2rem;
 }
-.contact-text p {
-  font-family: "Inter", sans-serif;
+#contact .contact-text p {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
   color: #172b4d;
 }
-
-.form {
+#contact .form {
   display: none;
 }
-
-.form2 {
-  margin-top: 1rem;
+#contact .form2 {
+  margin-top: 4rem;
+  display: block;
 }
-.form2 fieldset {
-  width: 328px;
+#contact .form2 fieldset {
+  width: 327px;
   height: 400px;
   border: none;
 }
-.form2 fieldset input {
-  margin-bottom: 1rem;
-}
-.form2 fieldset input,
-.form2 fieldset textarea {
-  padding: 10px;
-  margin-left: 1rem;
-  width: 100%;
-  border: none;
+#contact .form2 fieldset .fullN {
+  height: 50px;
   border-bottom: 1px solid #dbd8d7;
 }
-.form2 fieldset input:focus,
-.form2 fieldset textarea:focus {
+#contact .form2 fieldset .fullN input {
+  width: 50%;
+  height: 45px;
+  border: none;
+}
+#contact .form2 fieldset .fullN input:focus {
   outline: none;
 }
-.form2 fieldset textarea {
-  background-color: #e7e5e5;
+#contact .form2 fieldset .err {
+  color: red;
 }
-.form2 fieldset button {
-  width: 122px;
+#contact .form2 fieldset .mail {
+  height: 50px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dbd8d7;
+}
+#contact .form2 fieldset .mail input {
+  width: 99%;
+  height: 45px;
+  border: none;
+}
+#contact .form2 fieldset .mail input:focus {
+  outline: none;
+}
+#contact .form2 fieldset .mail .emailError2 {
+  position: relative;
+  bottom: 30px;
+  left: 65%;
+}
+#contact .form2 fieldset .mail .emailValid2 {
+  position: absolute;
+  top: 130px;
+  left: 37%;
+}
+#contact .form2 fieldset .msg {
+  margin-bottom: 2rem;
+}
+#contact .form2 fieldset .msg textarea {
+  width: 99%;
+  border: none;
+  background-color: #fbf8f7;
+}
+#contact .form2 fieldset .msg textarea:focus {
+  outline: none;
+}
+#contact .form2 fieldset .fullNerror {
+  position: relative;
+  left: 8%;
+}
+#contact .form2 fieldset .fullNValid {
+  position: absolute;
+  top: 80px;
+  left: 37%;
+}
+#contact .form2 fieldset .msgError2 {
+  position: relative;
+  left: 45%;
+}
+#contact .form2 fieldset .msgValid2 {
+  position: absolute;
+  top: 320px;
+  left: 37%;
+}
+#contact .form2 fieldset button {
   height: 48px;
-  background-color: #ff6b00;
+  background-color: #ff5800;
   color: #fff;
   border: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "roboto", sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-  margin-left: 8em;
-  margin-top: 1rem;
+  margin-left: 8rem;
 }
 
 #copyright {
@@ -574,6 +620,204 @@
   margin: 15px 15px 15px 30px;
   display: flex;
   flex-direction: column;
+}
+.popup #contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.popup #contact .form2 {
+  margin-top: 4rem;
+  display: none;
+}
+.popup #contact .form2 fieldset {
+  width: 327px;
+  height: 400px;
+  border: none;
+}
+.popup #contact .form2 fieldset .fullN {
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+.popup #contact .form2 fieldset .fullN input {
+  width: 50%;
+  height: 45px;
+  border: none;
+}
+.popup #contact .form2 fieldset .fullN input:focus {
+  outline: none;
+}
+.popup #contact .form2 fieldset .err {
+  color: red;
+}
+.popup #contact .form2 fieldset .mail {
+  height: 50px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+.popup #contact .form2 fieldset .mail input {
+  width: 99%;
+  height: 45px;
+  border: none;
+}
+.popup #contact .form2 fieldset .mail input:focus {
+  outline: none;
+}
+.popup #contact .form2 fieldset .mail .emailError2 {
+  position: absolute;
+  top: 130px;
+  left: 28%;
+}
+.popup #contact .form2 fieldset .mail .emailValid2 {
+  position: absolute;
+  top: 130px;
+  left: 37%;
+}
+.popup #contact .form2 fieldset .msg {
+  margin-bottom: 2rem;
+}
+.popup #contact .form2 fieldset .msg textarea {
+  width: 99%;
+  border: none;
+  background-color: #fbf8f7;
+}
+.popup #contact .form2 fieldset .msg textarea:focus {
+  outline: none;
+}
+.popup #contact .form2 fieldset .fullNerror {
+  position: absolute;
+  top: 80px;
+  left: 25%;
+}
+.popup #contact .form2 fieldset .fullNValid {
+  position: absolute;
+  top: 80px;
+  left: 37%;
+}
+.popup #contact .form2 fieldset .msgError2 {
+  position: absolute;
+  top: 320px;
+  left: 20%;
+}
+.popup #contact .form2 fieldset .msgValid2 {
+  position: absolute;
+  top: 320px;
+  left: 37%;
+}
+.popup #contact .form2 fieldset button {
+  height: 48px;
+  background-color: #ff5800;
+  color: #fff;
+  border: none;
+  font-family: "roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  margin-left: 7rem;
+}
+.popup #contact .contact-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 327px;
+  height: 216px;
+  margin-right: 2rem;
+}
+.popup #contact .contact-text p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+.popup #contact .form {
+  display: block;
+  margin-top: 1rem;
+}
+.popup #contact .form fieldset {
+  border: none;
+  width: 100%;
+  height: 400px;
+}
+.popup #contact .form fieldset .mail {
+  height: 50px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+.popup #contact .form fieldset .mail input {
+  width: 99%;
+  height: 45px;
+  border: none;
+}
+.popup #contact .form fieldset .mail input:focus {
+  outline: none;
+}
+.popup #contact .form fieldset .msg textarea {
+  width: 99%;
+  border: none;
+  background-color: #fbf8f7;
+}
+.popup #contact .form fieldset .msg textarea:focus {
+  outline: none;
+}
+.popup #contact .form fieldset .submitErr {
+  color: red;
+}
+.popup #contact .form fieldset .fa-sharp {
+  color: green;
+}
+.popup #contact .form fieldset .firstNerror {
+  position: absolute;
+  top: 35px;
+  left: 32%;
+}
+.popup #contact .form fieldset .firstNValid {
+  position: absolute;
+  top: 35px;
+  left: 47%;
+}
+.popup #contact .form fieldset .lastNerror {
+  position: absolute;
+  top: 35px;
+  left: 80%;
+}
+.popup #contact .form fieldset .lastNValid {
+  position: absolute;
+  top: 35px;
+  left: 95%;
+}
+.popup #contact .form fieldset .emailError {
+  position: absolute;
+  left: 83%;
+  top: 95px;
+}
+.popup #contact .form fieldset .emailValid {
+  position: absolute;
+  top: 97px;
+  left: 94%;
+}
+.popup #contact .form fieldset .msgError {
+  position: absolute;
+  left: 80%;
+  top: 270px;
+}
+.popup #contact .form fieldset .err {
+  color: red;
+}
+.popup #contact .form fieldset button {
+  margin-top: 2rem;
+  height: 48px;
+  background-color: #ff5800;
+  color: #fff;
+  border: none;
+  font-family: "roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
 }
 .popup .hdg {
   margin-top: 1.5rem;
@@ -759,15 +1003,18 @@
   #contact {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-around;
-    width: 100%;
+    margin-top: 2rem;
+  }
+  #contact .contact-text {
+    margin-top: 5rem;
   }
   .form {
     display: none;
   }
   .form2 {
-    margin-top: 8rem;
+    margin-top: 0;
     margin-right: 2rem;
   }
   .form2 fieldset {
@@ -977,85 +1224,142 @@
     flex-direction: row;
     justify-content: space-around;
   }
-  #contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-  }
-  .contact-text {
-    margin-top: 8rem;
-    margin-left: 3rem;
-    width: 455px;
-    height: 256px;
-  }
-  .contact-text p {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
-    color: #262626;
-  }
-  .form2 {
-    display: none;
-  }
-  .form {
-    margin-top: 4rem;
-    display: block;
-  }
-  .form fieldset {
-    width: 684px;
-    height: 330px;
-    border: none;
-  }
-  .form fieldset input {
-    margin-bottom: 1rem;
-  }
-  .form fieldset input,
-.form fieldset textarea {
-    width: 85%;
-    padding: 1em;
-    border: none;
-  }
-  .form fieldset input {
-    border-bottom: 1px solid #dbd8d7;
-  }
-  .form fieldset textarea {
-    background-color: #fbf8f7;
-  }
-  .form fieldset input:focus,
-.form fieldset textarea:focus {
-    outline: none;
-  }
-  .form fieldset .names {
-    max-width: 100%;
+  .names {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
   }
-  .form fieldset .firstN {
-    position: relative;
+  .names .firstN {
+    width: 45%;
+    height: 50px;
+    border-bottom: 1px solid #dbd8d7;
+  }
+  .names .lastN {
+    width: 45%;
+    height: 50px;
+    border-bottom: 1px solid #dbd8d7;
+  }
+  .names input {
     width: 40%;
-  }
-  .form fieldset .lastN {
-    position: relative;
-    left: -10%;
-    width: 40%;
-  }
-  .form fieldset button {
-    height: 48px;
-    background-color: #ff6b00;
-    color: #fff;
+    height: 45px;
     border: none;
-    font-family: "Roboto", sans-serif;
+  }
+  .names input:focus {
+    outline: none;
+  }
+  #contact {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+  #contact .contact-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 327px;
+    height: 216px;
+    margin-right: 2rem;
+    margin-top: 0;
+  }
+  #contact .contact-text p {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: #172b4d;
+  }
+  #contact .form2 {
+    display: none;
+  }
+  #contact .form {
+    display: block;
+    margin-top: 8rem;
+  }
+  #contact .form fieldset {
+    border: none;
+    width: 684px;
+    height: 400px;
+  }
+  #contact .form fieldset .mail {
+    height: 50px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #dbd8d7;
+  }
+  #contact .form fieldset .mail input {
+    width: 99%;
+    height: 45px;
+    border: none;
+  }
+  #contact .form fieldset .mail input:focus {
+    outline: none;
+  }
+  #contact .form fieldset .msg textarea {
+    width: 99%;
+    border: none;
+    background-color: #fbf8f7;
+  }
+  #contact .form fieldset .msg textarea:focus {
+    outline: none;
+  }
+  #contact .form fieldset .msg .msgError {
+    position: relative;
+    left: 73%;
+    bottom: 30px;
+  }
+  #contact .form fieldset .msg .msgValid {
+    position: relative;
+    left: 94%;
+    bottom: 30px;
+  }
+  #contact .form fieldset .submitErr {
+    color: red;
+    position: relative;
+  }
+  #contact .form fieldset .fa-sharp {
+    color: green;
+  }
+  #contact .form fieldset .firstNerror {
+    position: relative;
+    left: 15%;
+  }
+  #contact .form fieldset .firstNValid {
+    position: relative;
+    left: 50%;
+  }
+  #contact .form fieldset .lastNerror {
+    position: relative;
+    left: 10%;
+  }
+  #contact .form fieldset .lastNValid {
+    position: relative;
+    left: 50%;
+  }
+  #contact .form fieldset .emailError {
+    position: relative;
+    bottom: 65%;
+    left: 82%;
+  }
+  #contact .form fieldset .emailValid {
+    position: relative;
+    bottom: 70%;
+    left: 96%;
+  }
+  #contact .form fieldset .err {
+    color: red;
+  }
+  #contact .form fieldset button {
+    margin-top: 1.5rem;
+    height: 48px;
+    background-color: #ff5800;
+    color: #fff;
+    border: none;
+    font-family: "roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
     font-size: 17px;
     line-height: 24px;
-    margin-left: 0;
-    margin-top: 1rem;
   }
   #copyright {
     border-top: 1px solid #dfe1e6;
