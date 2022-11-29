@@ -296,6 +296,16 @@ function createDiv(arr) {
                   const btns = div;
                   div.className = item;
                   elem.btns.map((item) => {
+                    const aTag1 = document.createElement('a');
+                    worksInfo.map((elem) => {
+                      aTag1.href = elem.demoLink;
+                    });
+
+                    const aTag2 = document.createElement('a');
+                    worksInfo.map((elem) => {
+                      aTag2.href = elem.srcLink;
+                    });
+
                     const btn1 = document.createElement('button');
                     const btn2 = document.createElement('button');
                     if (item === 'See live') {
@@ -306,10 +316,11 @@ function createDiv(arr) {
                       image.alt = elem.alt;
                       span1.appendChild(image);
                       btn1.appendChild(span1);
-                      btns.appendChild(btn1);
+                      btns.appendChild(aTag1);
                       popText.appendChild(btns);
                       btn1.appendChild(span1);
-                      btns.appendChild(btn1);
+                      aTag1.appendChild(btn1);
+                      // btns.appendChild(btn1);
                     }
                     if (item === 'See source') {
                       btn2.innerHTML = item;
@@ -324,8 +335,8 @@ function createDiv(arr) {
                           }
                         });
                       });
-
-                      btns.appendChild(btn2);
+                      aTag2.appendChild(btn2);
+                      btns.appendChild(aTag2);
 
                       popText.appendChild(btns);
                     }
@@ -496,7 +507,6 @@ function formValidate() {
   submitErr.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
   return true;
 }
-
 function formValidate2() {
   if (!validateFullName() || !validateEmail2() || !validateMsg2()) {
     submitErr2.style.display = 'block';
