@@ -616,7 +616,6 @@
 .popup .popInfo .popImg img {
   height: auto;
   width: 100%;
-  aspect-ratio: 6/5;
 }
 .popup .popInfo .popText {
   width: 100%;
@@ -938,7 +937,7 @@
   }
   .popup {
     width: 85vw;
-    height: 510px;
+    height: 680px;
     top: 5%;
     margin-left: 5rem;
   }
@@ -953,16 +952,19 @@
     color: #172b4d;
   }
   .popup .popInfo {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
   }
   .popup .popInfo .popText {
     margin-top: 0;
+    width: 50%;
   }
   .popup .popInfo .popText p {
     width: 80%;
   }
   .popup .popInfo .popText .btns {
-    margin-top: 9rem;
+    margin-top: 23rem;
   }
   #about {
     background-image: url("../images/abt.png");

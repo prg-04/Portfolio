@@ -639,7 +639,7 @@ $blue: #344563;
       img {
         height: auto;
         width: 100%;
-        aspect-ratio: 6/5;
+        // aspect-ratio: 6/5;
       }
     }
     .popText {
@@ -999,7 +999,7 @@ $blue: #344563;
 
   .popup {
     width: 85vw;
-    height: 510px;
+    height: 680px;
     top: 5%;
     margin-left: 5rem;
     .hdg {
@@ -1015,14 +1015,17 @@ $blue: #344563;
       }
     }
     .popInfo {
+      display: flex;
+      justify-content: space-between;
       flex-direction: row;
       .popText {
         margin-top: 0;
+        width: 50%;
         p {
           width: 80%;
         }
         .btns {
-          margin-top: 9rem;
+          margin-top: 23rem;
         }
       }
     }
